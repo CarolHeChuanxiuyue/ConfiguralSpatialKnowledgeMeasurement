@@ -1,0 +1,35 @@
+Subject	642
+Age	19
+Gender	female
+AllowedTime	60
+Order	Random
+Subject	Trial	Center	Top	Target	TargetAngle	EstimateAngle	AngularError
+642	1	You	trash can	stove	194	195	1
+642	2	You	chair	piano	5	62	57
+642	3	You	picnic table	chair	67	159	92
+642	4	You	bookshelf	plant	81	180	99
+642	5	You	telescope	trash can	336	171	165
+642	6	You	mailbox	bookshelf	42	89	47
+642	7	You	stove	wheelbarrow	226	214	12
+642	8	You	telescope	wheelbarrow	350	242	108
+642	9	You	plant	well	120	269	149
+642	10	You	mailbox	harp	56	60	4
+642	11	You	harp	telescope	269	217	52
+642	12	You	plant	piano	56	68	12
+642	13	You	harp	mailbox	235	44	169
+642	14	You	harp	plant	289	90	161
+642	15	You	chair	trash can	21	124	103
+642	16	You	trash can	picnic table	170	202	32
+642	17	You	piano	harp	0	48	48
+642	18	You	bookshelf	piano	179	181	2
+642	19	You	stove	chair	240	222	18
+642	20	You	well	telescope	195	299	104
+642	21	You	piano	trash can	312	324	12
+642	22	You	wheelbarrow	stove	308	189	119
+642	23	You	trash can	well	99	124	25
+642	24	You	well	picnic table	225	223	2
+642	25	You	picnic table	wheelbarrow	51	127	76
+642	26	You	stove	bookshelf	199	245	46
+642	27	You	wheelbarrow	mailbox	46	74	28
+Average	64.56
+Stdev	54.94

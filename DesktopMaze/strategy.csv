@@ -1,0 +1,2400 @@
+﻿Subject,Order,TrialID,human_coding
+"605
+",1,dsp1_18,shortcut
+"605
+",2,dsp1_23,learned
+"605
+",3,dsp1_17,reverse learned
+"605
+",4,dsp1_19,shortcut liberal
+"605
+",5,dsp1_11,shortcut
+"605
+",6,dsp1_13,shortcut
+"605
+",7,dsp1_22,shortcut
+"605
+",8,dsp1_16,learned liberal
+"605
+",9,dsp1_07,uncodable
+"605
+",10,dsp1_05,shortcut liberal
+"605
+",11,dsp1_03,shortcut
+"605
+",12,dsp1_09,reverse learned
+"605
+",13,dsp1_02,shortcut
+"605
+",14,dsp1_21,shortcut liberal
+"605
+",15,dsp1_24,shortcut
+"605
+",16,dsp1_10,uncodable
+"605
+",17,dsp1_06,shortcut
+"605
+",18,dsp1_14,shortcut
+"605
+",19,dsp1_04,shortcut liberal
+"605
+",20,dsp1_08,shortcut
+"606
+",1,dsp1_13,reversed learned
+"606
+",2,dsp1_09,reversed learned
+"606
+",3,dsp1_21,learned
+"606
+",4,dsp1_22,reversed learned
+"606
+",5,dsp1_14,shortcut
+"606
+",6,dsp1_07,uncodable
+"606
+",7,dsp1_10,shortcut
+"606
+",8,dsp1_03,uncodable
+"606
+",9,dsp1_17,shortcut liberal
+"606
+",10,dsp1_02,uncodable
+"606
+",11,dsp1_16,shortcut
+"606
+",12,dsp1_23,learned
+"606
+",13,dsp1_19,shortcut liberal
+"606
+",14,dsp1_18,learned liberal
+"606
+",15,dsp1_06,shortcut
+"606
+",16,dsp1_04,shortcut
+"606
+",17,dsp1_08,uncodable
+"606
+",18,dsp1_11,shortcut
+"606
+",19,dsp1_05,shortcut
+"606
+",20,dsp1_24,uncodable
+"607
+",1,dsp1_07,learned
+"607
+",2,dsp1_17,Failure
+"607
+",3,dsp1_14,uncodable
+"607
+",4,dsp1_04,shortcut
+"607
+",5,dsp1_23,Failure
+"607
+",6,dsp1_03,learned liberal
+"607
+",7,dsp1_06,shortcut
+"607
+",8,dsp1_02,uncodable
+"607
+",9,dsp1_05,learned liberal
+"607
+",10,dsp1_19,Failure
+"607
+",11,dsp1_10,learned liberal
+"607
+",12,dsp1_09,reversed learned
+"607
+",13,dsp1_21,uncodable
+"607
+",14,dsp1_11,learned liberal
+"607
+",15,dsp1_16,shortcut
+"607
+",16,dsp1_13,uncodable
+"607
+",17,dsp1_18,shortcut
+"607
+",18,dsp1_24,uncodable
+"607
+",19,dsp1_08,shortcut
+"607
+",20,dsp1_22,shortcut
+"608
+",1,dsp1_18,learned
+"608
+",2,dsp1_04,shortcut
+"608
+",3,dsp1_21,uncodable
+"608
+",4,dsp1_06,shortcut liberal
+"608
+",5,dsp1_02,learned
+"608
+",6,dsp1_13,uncodable
+"608
+",7,dsp1_03,shortcut
+"608
+",8,dsp1_14,uncodable
+"608
+",9,dsp1_10,Failure
+"608
+",10,dsp1_08,shortcut
+"608
+",11,dsp1_07,shortcut liberal
+"608
+",12,dsp1_23,learned
+"608
+",13,dsp1_05,uncodable
+"608
+",14,dsp1_19,shortcut
+"608
+",15,dsp1_11,shortcut
+"608
+",16,dsp1_16,shortcut
+"608
+",17,dsp1_09,uncodable
+"608
+",18,dsp1_24,learned
+"608
+",19,dsp1_17,learned liberal
+"608
+",20,dsp1_22,learned
+"609
+",1,dsp1_19,shortcut liberal
+"609
+",2,dsp1_16,shortcut
+"609
+",3,dsp1_21,shortcut liberal
+"609
+",4,dsp1_03,shortcut liberal
+"609
+",5,dsp1_08,shortcut
+"609
+",6,dsp1_18,shortcut
+"609
+",7,dsp1_14,shortcut
+"609
+",8,dsp1_13,shortcut liberal
+"609
+",9,dsp1_24,shortcut
+"609
+",10,dsp1_02,shortcut
+"609
+",11,dsp1_22,shortcut liberal
+"609
+",12,dsp1_17,rev learned liberal
+"609
+",13,dsp1_07,shortcut liberal
+"609
+",14,dsp1_04,shortcut
+"609
+",15,dsp1_11,shortcut
+"609
+",16,dsp1_09,shortcut liberal
+"609
+",17,dsp1_05,shortcut
+"609
+",18,dsp1_23,shortcut liberal
+"609
+",19,dsp1_06,shortcut liberal
+"609
+",20,dsp1_10,shortcut
+"610
+",1,dsp1_23,shortcut liberal
+"610
+",2,dsp1_16,shortcut
+"610
+",3,dsp1_02,shortcut liberal
+"610
+",4,dsp1_10,learned
+"610
+",5,dsp1_08,shortcut
+"610
+",6,dsp1_17,rev learned liberal
+"610
+",7,dsp1_18,shortcut
+"610
+",8,dsp1_14,uncodable
+"610
+",9,dsp1_09,learned liberal
+"610
+",10,dsp1_21,shortcut liberal
+"610
+",11,dsp1_24,shortcut
+"610
+",12,dsp1_22,shortcut liberal
+"610
+",13,dsp1_03,shortcut
+"610
+",14,dsp1_13,shortcut
+"610
+",15,dsp1_11,shortcut
+"610
+",16,dsp1_05,shortcut
+"610
+",17,dsp1_07,uncodable
+"610
+",18,dsp1_19,rev learned liberal
+"610
+",19,dsp1_06,shortcut
+"610
+",20,dsp1_04,shortcut liberal
+"611
+",1,dsp1_24,learned
+"611
+",2,dsp1_08,shortcut
+"611
+",3,dsp1_11,shortcut liberal
+"611
+",4,dsp1_03,shortcut
+"611
+",5,dsp1_16,shortcut
+"611
+",6,dsp1_17,learned liberal
+"611
+",7,dsp1_23,uncodable
+"611
+",8,dsp1_02,shortcut
+"611
+",9,dsp1_14,uncodable
+"611
+",10,dsp1_06,rev learned liberal
+"611
+",11,dsp1_05,shortcut
+"611
+",12,dsp1_19,shortcut
+"611
+",13,dsp1_07,shortcut liberal
+"611
+",14,dsp1_13,shortcut liberal
+"611
+",15,dsp1_22,learned liberal
+"611
+",16,dsp1_10,rev learned liberal
+"611
+",17,dsp1_09,learned liberal
+"611
+",18,dsp1_21,shortcut liberal
+"611
+",19,dsp1_04,shortcut
+"611
+",20,dsp1_18,shortcut
+"612
+",1,dsp1_18,reversed learned
+"612
+",2,dsp1_09,shortcut liberal
+"612
+",3,dsp1_14,uncodable
+"612
+",4,dsp1_10,uncodable
+"612
+",5,dsp1_21,learned
+"612
+",6,dsp1_13,learned liberal
+"612
+",7,dsp1_03,shortcut
+"612
+",8,dsp1_04,shortcut
+"612
+",9,dsp1_22,shortcut liberal
+"612
+",10,dsp1_07,shortcut liberal
+"612
+",11,dsp1_08,shortcut
+"612
+",12,dsp1_06,shortcut liberal
+"612
+",13,dsp1_24,uncodable
+"612
+",14,dsp1_23,learned liberal
+"612
+",15,dsp1_17,shortcut liberal
+"612
+",16,dsp1_05,shortcut
+"612
+",17,dsp1_11,learned liberal
+"612
+",18,dsp1_16,shortcut
+"612
+",19,dsp1_19,shortcut
+"612
+",20,dsp1_02,uncodable
+"613
+",1,dsp1_03,Failure
+"613
+",2,dsp1_11,learned liberal
+"613
+",3,dsp1_09,Failure
+"613
+",4,dsp1_02,uncodable
+"613
+",5,dsp1_23,uncodable
+"613
+",6,dsp1_14,learned
+"613
+",7,dsp1_10,uncodable
+"613
+",8,dsp1_18,rev learned liberal
+"613
+",9,dsp1_08,uncodable
+"613
+",10,dsp1_22,learned liberal
+"613
+",11,dsp1_13,shortcut liberal
+"613
+",12,dsp1_06,shortcut liberal
+"613
+",13,dsp1_05,shortcut liberal
+"613
+",14,dsp1_16,uncodable
+"613
+",15,dsp1_17,shortcut liberal
+"613
+",16,dsp1_21,learned liberal
+"613
+",17,dsp1_07,learned liberal
+"613
+",18,dsp1_04,shortcut
+"613
+",19,dsp1_24,uncodable
+"613
+",20,dsp1_19,uncodable
+"614
+",1,dsp1_22,shortcut
+"614
+",2,dsp1_23,shortcut
+"614
+",3,dsp1_16,shortcut
+"614
+",4,dsp1_07,shortcut liberal
+"614
+",5,dsp1_05,shortcut
+"614
+",6,dsp1_09,shortcut
+"614
+",7,dsp1_14,shortcut
+"614
+",8,dsp1_24,learned liberal
+"614
+",9,dsp1_04,shortcut
+"614
+",10,dsp1_17,shortcut liberal
+"614
+",11,dsp1_18,learned
+"614
+",12,dsp1_21,shortcut
+"614
+",13,dsp1_13,learned liberal
+"614
+",14,dsp1_08,shortcut liberal
+"614
+",15,dsp1_19,shortcut liberal
+"614
+",16,dsp1_10,shortcut
+"614
+",17,dsp1_03,shortcut
+"614
+",18,dsp1_11,shortcut
+"614
+",19,dsp1_02,shortcut
+"614
+",20,dsp1_06,reverse learned
+"615
+",1,dsp1_02,uncodable
+"615
+",2,dsp1_04,shortcut liberal
+"615
+",3,dsp1_08,learned liberal
+"615
+",4,dsp1_17,rev learned liberal
+"615
+",5,dsp1_16,uncodable
+"615
+",6,dsp1_14,shortcut
+"615
+",7,dsp1_11,shortcut liberal
+"615
+",8,dsp1_03,Failure
+"615
+",9,dsp1_23,uncodable
+"615
+",10,dsp1_21,shortcut
+"615
+",11,dsp1_19,learned liberal
+"615
+",12,dsp1_18,uncodable
+"615
+",13,dsp1_22,learned liberal
+"615
+",14,dsp1_09,shortcut liberal
+"615
+",15,dsp1_13,learned liberal
+"615
+",16,dsp1_24,learned liberal
+"615
+",17,dsp1_10,uncodable
+"615
+",18,dsp1_07,shortcut liberal
+"615
+",19,dsp1_06,shortcut liberal
+"615
+",20,dsp1_05,shortcut liberal
+"616
+",1,dsp1_21,uncodable
+"616
+",2,dsp1_05,shortcut liberal
+"616
+",3,dsp1_06,reverse learned
+"616
+",4,dsp1_09,shortcut liberal
+"616
+",5,dsp1_07,uncodable
+"616
+",6,dsp1_19,learned liberal
+"616
+",7,dsp1_03,uncodable
+"616
+",8,dsp1_17,shortcut liberal
+"616
+",9,dsp1_23,shortcut liberal
+"616
+",10,dsp1_10,shortcut
+"616
+",11,dsp1_02,uncodable
+"616
+",12,dsp1_08,rev learned liberal
+"616
+",13,dsp1_04,shortcut
+"616
+",14,dsp1_14,rev learned liberal
+"616
+",15,dsp1_13,rev learned liberal
+"616
+",16,dsp1_18,uncodable
+"616
+",17,dsp1_24,learned liberal
+"616
+",18,dsp1_11,rev learned liberal
+"616
+",19,dsp1_22,rev learned liberal
+"616
+",20,dsp1_16,rev learned liberal
+"617
+",1,dsp1_02,learned
+"617
+",2,dsp1_22,Failure
+"617
+",3,dsp1_14,uncodable
+"617
+",4,dsp1_19,uncodable
+"617
+",5,dsp1_03,shortcut
+"617
+",6,dsp1_16,shortcut
+"617
+",7,dsp1_13,learned liberal
+"617
+",8,dsp1_10,rev learned liberal
+"617
+",9,dsp1_08,shortcut liberal
+"617
+",10,dsp1_04,shortcut
+"617
+",11,dsp1_23,uncodable
+"617
+",12,dsp1_21,uncodable
+"617
+",13,dsp1_18,uncodable
+"617
+",14,dsp1_24,rev learned liberal
+"617
+",15,dsp1_05,learned liberal
+"617
+",16,dsp1_07,uncodable
+"617
+",17,dsp1_06,learned liberal
+"617
+",18,dsp1_17,shortcut liberal
+"617
+",19,dsp1_09,learned liberal
+"617
+",20,dsp1_11,shortcut liberal
+"618
+",1,dsp1_07,uncodable
+"618
+",2,dsp1_05,shortcut liberal
+"618
+",3,dsp1_02,uncodable
+"618
+",4,dsp1_23,shortcut liberal
+"618
+",5,dsp1_13,Failure
+"618
+",6,dsp1_16,rev learned liberal
+"618
+",7,dsp1_24,uncodable
+"618
+",8,dsp1_19,shortcut
+"618
+",9,dsp1_14,shortcut
+"618
+",10,dsp1_11,rev learned liberal
+"618
+",11,dsp1_21,uncodable
+"618
+",12,dsp1_18,uncodable
+"618
+",13,dsp1_03,uncodable
+"618
+",14,dsp1_17,Failure
+"618
+",15,dsp1_10,learned liberal
+"618
+",16,dsp1_04,shortcut
+"618
+",17,dsp1_08,uncodable
+"618
+",18,dsp1_22,learned liberal
+"618
+",19,dsp1_09,shortcut liberal
+"618
+",20,dsp1_06,shortcut liberal
+"619
+",1,dsp1_10,shortcut
+"619
+",2,dsp1_23,shortcut
+"619
+",3,dsp1_05,shortcut
+"619
+",4,dsp1_02,shortcut
+"619
+",5,dsp1_19,shortcut
+"619
+",6,dsp1_08,shortcut
+"619
+",7,dsp1_03,shortcut
+"619
+",8,dsp1_24,shortcut
+"619
+",9,dsp1_16,shortcut
+"619
+",10,dsp1_22,shortcut
+"619
+",11,dsp1_18,shortcut
+"619
+",12,dsp1_04,shortcut
+"619
+",13,dsp1_13,shortcut
+"619
+",14,dsp1_14,shortcut
+"619
+",15,dsp1_06,reverse learned
+"619
+",16,dsp1_07,shortcut
+"619
+",17,dsp1_11,shortcut
+"619
+",18,dsp1_21,shortcut
+"619
+",19,dsp1_09,shortcut
+"619
+",20,dsp1_17,shortcut
+"620
+",1,dsp1_03,learned
+"620
+",2,dsp1_05,shortcut liberal
+"620
+",3,dsp1_19,learned liberal
+"620
+",4,dsp1_18,shortcut
+"620
+",5,dsp1_06,rev learned liberal
+"620
+",6,dsp1_07,uncodable
+"620
+",7,dsp1_22,shortcut liberal
+"620
+",8,dsp1_17,shortcut
+"620
+",9,dsp1_04,shortcut
+"620
+",10,dsp1_10,shortcut
+"620
+",11,dsp1_14,shortcut
+"620
+",12,dsp1_02,uncodable
+"620
+",13,dsp1_24,uncodable
+"620
+",14,dsp1_21,learned
+"620
+",15,dsp1_16,shortcut
+"620
+",16,dsp1_08,shortcut
+"620
+",17,dsp1_11,shortcut
+"620
+",18,dsp1_09,learned liberal
+"620
+",19,dsp1_23,rev learned liberal
+"620
+",20,dsp1_13,rev learned liberal
+"621
+",1,dsp1_19,Failure
+"621
+",2,dsp1_02,learned liberal
+"621
+",3,dsp1_24,learned
+"621
+",4,dsp1_06,reverse learned
+"621
+",5,dsp1_14,learned
+"621
+",6,dsp1_10,uncodable
+"621
+",7,dsp1_13,reverse learned
+"621
+",8,dsp1_03,uncodable
+"621
+",9,dsp1_22,Failure
+"621
+",10,dsp1_18,learned
+"621
+",11,dsp1_05,Failure
+"621
+",12,dsp1_16,shortcut
+"621
+",13,dsp1_04,learned liberal
+"621
+",14,dsp1_21,rev learned liberal
+"621
+",15,dsp1_08,shortcut
+"621
+",16,dsp1_09,shortcut liberal
+"621
+",17,dsp1_23,uncodable
+"621
+",18,dsp1_07,shortcut liberal
+"621
+",19,dsp1_11,rev learned liberal
+"621
+",20,dsp1_17,learned liberal
+"622
+",1,dsp1_17,Failure
+"622
+",2,dsp1_21,learned
+"622
+",3,dsp1_05,shortcut liberal
+"622
+",4,dsp1_13,learned liberal
+"622
+",5,dsp1_24,shortcut liberal
+"622
+",6,dsp1_03,uncodable
+"622
+",7,dsp1_07,shortcut liberal
+"622
+",8,dsp1_23,learned liberal
+"622
+",9,dsp1_02,Failure
+"622
+",10,dsp1_11,shortcut liberal
+"622
+",11,dsp1_14,shortcut
+"622
+",12,dsp1_16,shortcut
+"622
+",13,dsp1_08,uncodable
+"622
+",14,dsp1_04,shortcut
+"622
+",15,dsp1_18,learned
+"622
+",16,dsp1_09,shortcut
+"622
+",17,dsp1_06,shortcut liberal
+"622
+",18,dsp1_19,shortcut
+"622
+",19,dsp1_22,uncodable
+"623
+",1,dsp1_14,Failure
+"623
+",2,dsp1_13,Failure
+"623
+",3,dsp1_09,shortcut liberal
+"623
+",4,dsp1_18,learned
+"623
+",5,dsp1_19,learned liberal
+"623
+",6,dsp1_05,Failure
+"623
+",7,dsp1_22,Failure
+"623
+",8,dsp1_10,Failure
+"623
+",9,dsp1_21,shortcut
+"623
+",10,dsp1_03,learned liberal
+"623
+",11,dsp1_06,reverse learned
+"623
+",12,dsp1_11,shortcut liberal
+"623
+",13,dsp1_17,Failure
+"623
+",14,dsp1_23,learned
+"623
+",15,dsp1_07,uncodable
+"623
+",16,dsp1_16,rev learned liberal
+"623
+",17,dsp1_04,shortcut
+"623
+",18,dsp1_24,learned
+"623
+",19,dsp1_02,uncodable
+"623
+",20,dsp1_08,shortcut
+"624
+",1,dsp1_22,learned liberal
+"624
+",2,dsp1_09,learned liberal
+"624
+",3,dsp1_08,shortcut
+"624
+",4,dsp1_21,rev learned liberal
+"624
+",5,dsp1_06,reverse learned
+"624
+",6,dsp1_19,rev learned liberal
+"624
+",7,dsp1_02,shortcut
+"624
+",8,dsp1_24,uncodable
+"624
+",9,dsp1_13,reverse learned
+"624
+",10,dsp1_23,shortcut
+"624
+",11,dsp1_03,shortcut
+"624
+",12,dsp1_18,shortcut liberal
+"624
+",13,dsp1_10,shortcut
+"624
+",14,dsp1_17,learned liberal
+"624
+",15,dsp1_05,shortcut
+"624
+",16,dsp1_07,shortcut liberal
+"624
+",17,dsp1_14,shortcut
+"624
+",18,dsp1_11,shortcut
+"624
+",19,dsp1_04,shortcut liberal
+"624
+",20,dsp1_16,shortcut
+"625
+",1,dsp1_13,Failure
+"625
+",2,dsp1_03,learned
+"625
+",3,dsp1_06,shortcut
+"625
+",4,dsp1_14,Failure
+"625
+",5,dsp1_08,shortcut
+"625
+",6,dsp1_05,Failure
+"625
+",7,dsp1_17,shortcut liberal
+"625
+",8,dsp1_09,learned liberal
+"625
+",9,dsp1_24,rev learned liberal
+"625
+",10,dsp1_19,rev learned liberal
+"625
+",11,dsp1_16,Failure
+"625
+",12,dsp1_22,Failure
+"625
+",13,dsp1_02,shortcut
+"625
+",14,dsp1_18,uncodable
+"625
+",15,dsp1_04,Failure
+"625
+",16,dsp1_10,learned
+"625
+",17,dsp1_07,uncodable
+"625
+",18,dsp1_23,learned
+"625
+",19,dsp1_11,uncodable
+"625
+",20,dsp1_21,learned
+"626
+",1,dsp1_18,learned
+"626
+",2,dsp1_14,shortcut
+"626
+",3,dsp1_05,reverse learned
+"626
+",4,dsp1_09,shortcut
+"626
+",5,dsp1_19,shortcut
+"626
+",6,dsp1_21,shortcut
+"626
+",7,dsp1_17,shortcut liberal
+"626
+",8,dsp1_24,shortcut liberal
+"626
+",9,dsp1_10,shortcut
+"626
+",10,dsp1_22,shortcut
+"626
+",11,dsp1_06,shortcut
+"626
+",12,dsp1_07,shortcut liberal
+"626
+",13,dsp1_16,shortcut
+"626
+",14,dsp1_04,shortcut
+"626
+",15,dsp1_13,shortcut liberal
+"626
+",16,dsp1_02,shortcut
+"626
+",17,dsp1_08,shortcut
+"626
+",18,dsp1_03,shortcut
+"626
+",19,dsp1_23,shortcut liberal
+"626
+",20,dsp1_11,shortcut
+"627
+",1,dsp1_02,learned liberal
+"627
+",2,dsp1_09,reverse learned
+"627
+",3,dsp1_19,rev learned liberal
+"627
+",4,dsp1_04,learned liberal
+"627
+",5,dsp1_16,uncodable
+"627
+",6,dsp1_08,shortcut liberal
+"627
+",7,dsp1_13,learned liberal
+"627
+",8,dsp1_17,shortcut liberal
+"627
+",9,dsp1_18,uncodable
+"627
+",10,dsp1_21,shortcut
+"627
+",11,dsp1_06,reverse learned
+"627
+",12,dsp1_22,uncodable
+"627
+",13,dsp1_07,shortcut liberal
+"627
+",14,dsp1_14,Failure
+"627
+",15,dsp1_11,uncodable
+"627
+",16,dsp1_24,uncodable
+"627
+",17,dsp1_03,shortcut liberal
+"627
+",18,dsp1_23,uncodable
+"627
+",19,dsp1_10,uncodable
+"627
+",20,dsp1_05,uncodable
+"628
+",1,dsp1_22,Failure
+"628
+",2,dsp1_02,learned
+"628
+",3,dsp1_11,learned liberal
+"628
+",4,dsp1_23,learned
+"628
+",5,dsp1_08,uncodable
+"628
+",6,dsp1_03,learned liberal
+"628
+",7,dsp1_18,Failure
+"628
+",8,dsp1_09,learned liberal
+"628
+",9,dsp1_13,learned liberal
+"628
+",10,dsp1_07,learned liberal
+"628
+",11,dsp1_16,uncodable
+"628
+",12,dsp1_06,Failure
+"628
+",13,dsp1_10,learned
+"628
+",14,dsp1_21,uncodable
+"628
+",15,dsp1_24,rev learned liberal
+"628
+",16,dsp1_04,uncodable
+"628
+",17,dsp1_17,shortcut liberal
+"628
+",18,dsp1_14,uncodable
+"628
+",19,dsp1_19,learned liberal
+"628
+",20,dsp1_05,shortcut liberal
+"629
+",1,dsp1_06,shortcut
+"629
+",2,dsp1_19,shortcut
+"629
+",3,dsp1_18,shortcut
+"629
+",4,dsp1_04,shortcut
+"629
+",5,dsp1_05,shortcut
+"629
+",6,dsp1_07,shortcut
+"629
+",7,dsp1_02,shortcut
+"629
+",8,dsp1_10,shortcut
+"629
+",9,dsp1_09,shortcut
+"629
+",10,dsp1_24,shortcut
+"629
+",11,dsp1_23,shortcut
+"629
+",12,dsp1_11,shortcut
+"629
+",13,dsp1_22,shortcut
+"629
+",14,dsp1_21,shortcut
+"629
+",15,dsp1_13,shortcut
+"629
+",16,dsp1_17,shortcut
+"629
+",17,dsp1_08,shortcut
+"629
+",18,dsp1_14,shortcut
+"629
+",19,dsp1_16,shortcut
+"629
+",20,dsp1_03,shortcut
+"630
+",1,dsp1_08,uncodable
+"630
+",2,dsp1_07,shortcut liberal
+"630
+",3,dsp1_18,Failure
+"630
+",4,dsp1_21,uncodable
+"630
+",5,dsp1_03,learned liberal
+"630
+",6,dsp1_02,uncodable
+"630
+",7,dsp1_13,uncodable
+"630
+",8,dsp1_23,Failure
+"630
+",9,dsp1_06,shortcut liberal
+"630
+",10,dsp1_24,uncodable
+"630
+",11,dsp1_16,shortcut
+"630
+",12,dsp1_04,shortcut
+"630
+",13,dsp1_19,shortcut
+"630
+",14,dsp1_05,shortcut
+"630
+",15,dsp1_09,learned liberal
+"630
+",16,dsp1_22,Failure
+"630
+",17,dsp1_17,Failure
+"630
+",18,dsp1_14,Failure
+"630
+",19,dsp1_11,learned liberal
+"630
+",20,dsp1_10,shortcut
+"631
+",1,dsp1_02,learned
+"631
+",2,dsp1_04,shortcut
+"631
+",3,dsp1_03,learned liberal
+"631
+",4,dsp1_21,learned
+"631
+",5,dsp1_11,uncodable
+"631
+",6,dsp1_13,rev learned liberal
+"631
+",7,dsp1_06,reverse learned
+"631
+",8,dsp1_17,learned liberal
+"631
+",9,dsp1_10,shortcut
+"631
+",10,dsp1_18,learned
+"631
+",11,dsp1_22,learned
+"631
+",12,dsp1_16,reverse learned
+"631
+",13,dsp1_24,learned
+"631
+",14,dsp1_14,Failure
+"631
+",15,dsp1_08,shortcut
+"631
+",16,dsp1_09,Failure
+"631
+",17,dsp1_19,learned
+"631
+",18,dsp1_23,uncodable
+"631
+",19,dsp1_05,Failure
+"631
+",20,dsp1_07,shortcut liberal
+"632
+",1,dsp1_13,uncodable
+"632
+",2,dsp1_19,learned liberal
+"632
+",3,dsp1_10,Failure
+"632
+",4,dsp1_11,learned liberal
+"632
+",5,dsp1_16,learned
+"632
+",6,dsp1_03,learned liberal
+"632
+",7,dsp1_23,learned liberal
+"632
+",8,dsp1_21,uncodable
+"632
+",9,dsp1_05,shortcut liberal
+"632
+",10,dsp1_22,shortcut
+"632
+",11,dsp1_07,rev learned liberal
+"632
+",12,dsp1_08,shortcut
+"632
+",13,dsp1_09,learned
+"632
+",14,dsp1_17,Failure
+"632
+",15,dsp1_14,learned liberal
+"632
+",16,dsp1_24,uncodable
+"632
+",17,dsp1_06,learned
+"632
+",18,dsp1_18,learned
+"632
+",19,dsp1_04,shortcut
+"632
+",20,dsp1_02,uncodable
+"633
+",1,dsp1_21,learned
+"633
+",2,dsp1_19,learned liberal
+"633
+",3,dsp1_17,shortcut liberal
+"633
+",4,dsp1_23,learned
+"633
+",5,dsp1_04,shortcut
+"633
+",6,dsp1_16,learned
+"633
+",7,dsp1_24,learned
+"633
+",8,dsp1_06,shortcut
+"633
+",9,dsp1_13,shortcut
+"633
+",10,dsp1_14,shortcut
+"633
+",11,dsp1_18,shortcut
+"633
+",12,dsp1_08,rev learned liberal
+"633
+",13,dsp1_09,Failure
+"633
+",14,dsp1_02,uncodable
+"633
+",15,dsp1_03,uncodable
+"633
+",16,dsp1_22,shortcut
+"633
+",17,dsp1_05,shortcut
+"633
+",18,dsp1_07,rev learned liberal
+"633
+",19,dsp1_10,rev learned liberal
+"633
+",20,dsp1_11,shortcut liberal
+"634
+",1,dsp1_02,learned
+"634
+",2,dsp1_10,shortcut
+"634
+",3,dsp1_11,learned liberal
+"634
+",4,dsp1_09,learned liberal
+"634
+",5,dsp1_17,learned liberal
+"634
+",6,dsp1_04,uncodable
+"634
+",7,dsp1_13,Failure
+"634
+",8,dsp1_24,Failure
+"634
+",9,dsp1_14,Failure
+"634
+",10,dsp1_07,learned liberal
+"634
+",11,dsp1_18,learned
+"634
+",12,dsp1_23,Failure
+"634
+",13,dsp1_22,shortcut liberal
+"634
+",14,dsp1_21,shortcut
+"634
+",15,dsp1_03,learned liberal
+"634
+",16,dsp1_06,shortcut
+"634
+",17,dsp1_05,shortcut liberal
+"634
+",18,dsp1_16,shortcut
+"634
+",19,dsp1_19,rev learned liberal
+"634
+",20,dsp1_08,rev learned liberal
+"635
+","1
+",dsp1_11,Failure
+"635
+",2,dsp1_09,rev learned
+"635
+",3,dsp1_14,learned
+"635
+",4,dsp1_23,learned
+"635
+",5,dsp1_13,rev learned
+"635
+",6,dsp1_24,learned
+"635
+",7,dsp1_06,Failure
+"635
+",8,dsp1_17,shortcut
+"635
+",9,dsp1_16,uncodable
+"635
+",10,dsp1_08,shortcut liberal
+"635
+",11,dsp1_21,learned
+"635
+",12,dsp1_19,shortcut
+"635
+",13,dsp1_18,uncodable
+"635
+",14,dsp1_05,shortcut
+"635
+",15,dsp1_10,uncodable
+"635
+",16,dsp1_02,learned liberal
+"635
+",17,dsp1_07,shortcut liberal
+"635
+",18,dsp1_22,uncodable
+"635
+",19,dsp1_04,shortcut
+"635
+",20,dsp1_03,shortcut
+"636
+",1,dsp1_07,shortcut
+"636
+",2,dsp1_05,uncodable
+"636
+",3,dsp1_19,rev learned
+"636
+",4,dsp1_11,learned liberal
+"636
+",5,dsp1_13,uncodable
+"636
+",6,dsp1_10,rev learned liberal
+"636
+",7,dsp1_22,Failure
+"636
+",8,dsp1_06,shortcut
+"636
+",9,dsp1_23,learned liberal
+"636
+",10,dsp1_18,Failure
+"636
+",11,dsp1_09,shortcut liberal
+"636
+",12,dsp1_03,shortcut liberal
+"636
+",13,dsp1_17,shortcut liberal
+"636
+",14,dsp1_21,uncodable
+"636
+",15,dsp1_14,uncodable
+"636
+",16,dsp1_24,uncodable
+"636
+",17,dsp1_08,shortcut
+"636
+",18,dsp1_02,shortcut liberal
+"636
+",19,dsp1_04,shortcut liberal
+"636
+",20,dsp1_16,shortcut
+"637
+",1,dsp1_21,shortcut
+"637
+",2,dsp1_22,rev learned liberal
+"637
+",3,dsp1_09,shortcut liberal
+"637
+",4,dsp1_08,shortcut
+"637
+",5,dsp1_24,uncodable
+"637
+",6,dsp1_18,learned
+"637
+",7,dsp1_10,shortcut
+"637
+",8,dsp1_06,shortcut
+"637
+",9,dsp1_16,shortcut
+"637
+",10,dsp1_19,shortcut liberal
+"637
+",11,dsp1_14,uncodable
+"637
+",12,dsp1_03,shortcut liberal
+"637
+",13,dsp1_02,shortcut
+"637
+",14,dsp1_07,rev learned liberal
+"637
+",15,dsp1_23,uncodable
+"637
+",16,dsp1_17,rev learned liberal
+"637
+",17,dsp1_05,shortcut liberal
+"637
+",18,dsp1_04,shortcut liberal
+"637
+",19,dsp1_11,shortcut liberal
+"637
+",20,dsp1_13,shortcut liberal
+"638
+",1,dsp1_23,Failure
+"638
+",2,dsp1_19,Failure
+"638
+",3,dsp1_06,shortcut
+"638
+",4,dsp1_02,rev learned liberal
+"638
+",5,dsp1_18,Failure
+"638
+",6,dsp1_21,rev learned liberal
+"638
+",7,dsp1_10,rev learned liberal
+"638
+",8,dsp1_14,uncodable
+"638
+",9,dsp1_24,Failure
+"638
+",10,dsp1_07,rev learned liberal
+"638
+",11,dsp1_13,shortcut liberal
+"638
+",12,dsp1_05,Failure
+"638
+",13,dsp1_08,shortcut
+"638
+",14,dsp1_22,shortcut liberal
+"638
+",15,dsp1_17,Failure
+"638
+",16,dsp1_09,Failure
+"638
+",17,dsp1_16,rev learned liberal
+"638
+",18,dsp1_04,learned liberal
+"638
+",19,dsp1_11,learned liberal
+"638
+",20,dsp1_03,rev learned liberal
+"639
+",1,dsp1_09,Failure
+"639
+",2,dsp1_19,learned liberal
+"639
+",3,dsp1_18,Failure
+"639
+",4,dsp1_17,Failure
+"639
+",5,dsp1_16,shortcut
+"639
+",6,dsp1_21,learned liberal
+"639
+",7,dsp1_03,shortcut
+"639
+",8,dsp1_23,learned
+"639
+",9,dsp1_04,Failure
+"639
+",10,dsp1_07,uncodable
+"639
+",11,dsp1_05,shortcut liberal
+"639
+",12,dsp1_11,learned
+"639
+",13,dsp1_10,shortcut
+"639
+",14,dsp1_06,shortcut
+"639
+",15,dsp1_24,learned
+"639
+",16,dsp1_13,Failure
+"639
+",17,dsp1_14,Failure
+"639
+",18,dsp1_08,uncodable
+"639
+",19,dsp1_22,Failure
+"639
+",20,dsp1_02,Failure
+"640
+",1,dsp1_17,shortcut liberal
+"640
+",2,dsp1_05,learned liberal
+"640
+",3,dsp1_06,learned
+"640
+",4,dsp1_24,learned
+"640
+",5,dsp1_23,learned
+"640
+",6,dsp1_11,learned liberal
+"640
+",7,dsp1_10,shortcut
+"640
+",8,dsp1_08,learned liberal
+"640
+",9,dsp1_02,Failure
+"640
+",10,dsp1_07,shortcut liberal
+"640
+",11,dsp1_22,Failure
+"640
+",12,dsp1_03,learned liberal
+"640
+",13,dsp1_04,shortcut
+"640
+",14,dsp1_13,uncodable
+"640
+",15,dsp1_19,learned liberal
+"640
+",16,dsp1_18,Failure
+"640
+",17,dsp1_21,learned liberal
+"640
+",18,dsp1_09,shortcut liberal
+"640
+",19,dsp1_14,uncodable
+"640
+",20,dsp1_16,uncodable
+"641
+",1,dsp1_19,learned liberal
+"641
+",2,dsp1_16,shortcut
+"641
+",3,dsp1_23,shortcut liberal
+"641
+",4,dsp1_06,shortcut liberal
+"641
+",5,dsp1_03,shortcut
+"641
+",6,dsp1_02,uncodable
+"641
+",7,dsp1_13,rev learned
+"641
+",8,dsp1_17,shortcut
+"641
+",9,dsp1_10,rev learned liberal
+"641
+",10,dsp1_22,shortcut
+"641
+",11,dsp1_18,shortcut
+"641
+",12,dsp1_07,shortcut liberal
+"641
+",13,dsp1_08,shortcut
+"641
+",14,dsp1_11,shortcut liberal
+"641
+",15,dsp1_24,learned
+"641
+",16,dsp1_09,rev learned
+"641
+",17,dsp1_21,shortcut
+"641
+",18,dsp1_14,shortcut
+"641
+",19,dsp1_05,shortcut liberal
+"641
+",20,dsp1_04,shortcut
+"642
+",1,dsp1_13,Failure
+"642
+",2,dsp1_21,Failure
+"642
+",3,dsp1_11,rev learned
+"642
+",4,dsp1_08,uncodable
+"642
+",5,dsp1_24,learned
+"642
+",6,dsp1_03,uncodable
+"642
+",7,dsp1_10,shortcut
+"642
+",8,dsp1_04,Failure
+"642
+",9,dsp1_18,uncodable
+"642
+",10,dsp1_19,learned
+"642
+",11,dsp1_09,shortcut liberal
+"642
+",12,dsp1_17,shortcut liberal
+"642
+",13,dsp1_16,learned
+"642
+",14,dsp1_23,learned liberal
+"642
+",15,dsp1_02,uncodable
+"642
+",16,dsp1_05,uncodable
+"642
+",17,dsp1_06,shortcut
+"642
+",18,dsp1_14,uncodable
+"642
+",19,dsp1_22,rev learned
+"642
+",20,dsp1_07,shortcut
+"643
+",1,dsp1_13,uncodable
+"643
+",2,dsp1_16,shortcut
+"643
+",3,dsp1_11,rev learned liberal
+"643
+",4,dsp1_02,Failure
+"643
+",5,dsp1_22,Failure
+"643
+",6,dsp1_23,rev learned liberal
+"643
+",7,dsp1_14,shortcut
+"643
+",8,dsp1_24,rev learned liberal
+"643
+",9,dsp1_17,Failure
+"643
+",10,dsp1_06,shortcut
+"643
+",11,dsp1_05,Failure
+"643
+",12,dsp1_21,shortcut
+"643
+",13,dsp1_10,shortcut
+"643
+",14,dsp1_19,uncodable
+"643
+",15,dsp1_08,rev learned liberal
+"643
+",16,dsp1_04,uncodable
+"643
+",17,dsp1_07,uncodable
+"643
+",18,dsp1_03,uncodable
+"643
+",19,dsp1_09,learned liberal
+"643
+",20,dsp1_18,learned
+"645
+",1,dsp1_03,uncodable
+"645
+",2,dsp1_10,uncodable
+"645
+",3,dsp1_21,learned
+"645
+",4,dsp1_09,learned liberal
+"645
+",5,dsp1_02,uncodable
+"645
+",6,dsp1_14,shortcut
+"645
+",7,dsp1_22,uncodable
+"645
+",8,dsp1_08,learned liberal
+"645
+",9,dsp1_04,shortcut
+"645
+",10,dsp1_16,Failure
+"645
+",11,dsp1_18,shortcut
+"645
+",12,dsp1_06,shortcut
+"645
+",13,dsp1_23,uncodable
+"645
+",14,dsp1_07,shortcut liberal
+"645
+",15,dsp1_24,uncodable
+"645
+",16,dsp1_17,shortcut liberal
+"645
+",17,dsp1_13,uncodable
+"645
+",18,dsp1_05,shortcut liberal
+"645
+",19,dsp1_19,rev learned
+"645
+",20,dsp1_11,uncodable
+"646
+",1,dsp1_11,shortcut liberal
+"646
+",2,dsp1_18,shortcut
+"646
+",3,dsp1_24,rev learned liberal
+"646
+",4,dsp1_10,shortcut
+"646
+",5,dsp1_04,shortcut
+"646
+",6,dsp1_23,shortcut
+"646
+",7,dsp1_05,shortcut
+"646
+",8,dsp1_13,rev learned liberal
+"646
+",9,dsp1_09,shortcut liberal
+"646
+",10,dsp1_22,uncodable
+"646
+",11,dsp1_03,uncodable
+"646
+",12,dsp1_02,rev learned liberal
+"646
+",13,dsp1_08,shortcut
+"646
+",14,dsp1_16,shortcut
+"646
+",15,dsp1_17,uncodable
+"646
+",16,dsp1_07,shortcut liberal
+"646
+",17,dsp1_19,shortcut
+"646
+",18,dsp1_21,shortcut
+"646
+",19,dsp1_06,shortcut
+"646
+",20,dsp1_14,uncodable
+"647
+",1,dsp1_13,rev learned
+"647
+",2,dsp1_19,uncodable
+"647
+",3,dsp1_18,shortcut
+"647
+",4,dsp1_04,learned liberal
+"647
+",5,dsp1_03,learned liberal
+"647
+",6,dsp1_06,shortcut liberal
+"647
+",7,dsp1_05,shortcut liberal
+"647
+",8,dsp1_02,uncodable
+"647
+",9,dsp1_17,uncodable
+"647
+",10,dsp1_24,learned
+"647
+",11,dsp1_07,uncodable
+"647
+",12,dsp1_09,shortcut liberal
+"647
+",13,dsp1_23,shortcut liberal
+"647
+",14,dsp1_22,Failure
+"647
+",15,dsp1_10,shortcut
+"647
+",16,dsp1_21,shortcut
+"647
+",17,dsp1_14,rev learned liberal
+"647
+",18,dsp1_16,shortcut
+"647
+",19,dsp1_08,shortcut
+"647
+",20,dsp1_11,shortcut liberal
+"648
+",1,dsp1_08,shortcut
+"648
+",2,dsp1_11,shortcut
+"648
+",3,dsp1_16,shortcut
+"648
+",4,dsp1_17,shortcut liberal
+"648
+",5,dsp1_19,shortcut
+"648
+",6,dsp1_13,rev learned
+"648
+",7,dsp1_09,shortcut liberal
+"648
+",8,dsp1_24,shortcut
+"648
+",9,dsp1_07,rev learned liberal
+"648
+",10,dsp1_06,shortcut
+"648
+",11,dsp1_18,shortcut
+"648
+",12,dsp1_03,shortcut
+"648
+",13,dsp1_21,shortcut
+"648
+",14,dsp1_05,shortcut
+"648
+",15,dsp1_04,shortcut
+"648
+",16,dsp1_14,shortcut
+"648
+",17,dsp1_10,shortcut
+"648
+",18,dsp1_02,uncodable
+"648
+",19,dsp1_22,shortcut
+"648
+",20,dsp1_23,shortcut liberal
+"649
+",1,dsp1_17,Failure
+"649
+",2,dsp1_04,shortcut
+"649
+",3,dsp1_19,shortcut
+"649
+",4,dsp1_06,rev learned
+"649
+",5,dsp1_11,learned liberal
+"649
+",6,dsp1_07,uncodable
+"649
+",7,dsp1_16,shortcut
+"649
+",8,dsp1_10,uncodable
+"649
+",9,dsp1_21,uncodable
+"649
+",10,dsp1_02,uncodable
+"649
+",11,dsp1_23,learned
+"649
+",12,dsp1_05,shortcut liberal
+"649
+",13,dsp1_24,learned
+"649
+",14,dsp1_08,shortcut
+"649
+",15,dsp1_18,shortcut
+"649
+",16,dsp1_03,shortcut
+"649
+",17,dsp1_13,shortcut liberal
+"649
+",18,dsp1_09,shortcut
+"649
+",19,dsp1_22,Failure
+"649
+",20,dsp1_14,shortcut
+"650
+",1,dsp1_06,shortcut
+"650
+",2,dsp1_22,shortcut
+"650
+",3,dsp1_07,rev learned liberal
+"650
+",4,dsp1_13,shortcut liberal
+"650
+",5,dsp1_03,shortcut
+"650
+",6,dsp1_09,uncodable
+"650
+",7,dsp1_14,uncodable
+"650
+",8,dsp1_17,shortcut liberal
+"650
+",9,dsp1_19,learned liberal
+"650
+",10,dsp1_16,shortcut
+"650
+",11,dsp1_10,rev learned liberal
+"650
+",12,dsp1_18,Failure
+"650
+",13,dsp1_08,shortcut
+"650
+",14,dsp1_24,shortcut
+"650
+",15,dsp1_23,uncodable
+"650
+",16,dsp1_02,Failure
+"650
+",17,dsp1_11,shortcut liberal
+"650
+",18,dsp1_21,rev learned liberal
+"650
+",19,dsp1_04,uncodable
+"650
+",20,dsp1_05,shortcut liberal
+"651
+",1,dsp1_13,rev learned
+"651
+",2,dsp1_06,shortcut
+"651
+",3,dsp1_04,Failure
+"651
+",4,dsp1_03,Failure
+"651
+",5,dsp1_24,uncodable
+"651
+",6,dsp1_09,shortcut liberal
+"651
+",7,dsp1_17,rev learned liberal
+"651
+",8,dsp1_10,uncodable
+"651
+",9,dsp1_11,shortcut
+"651
+",10,dsp1_16,uncodable
+"651
+",11,dsp1_07,shortcut liberal
+"651
+",12,dsp1_18,uncodable
+"651
+",13,dsp1_02,Failure
+"651
+",14,dsp1_05,shortcut liberal
+"651
+",15,dsp1_21,uncodable
+"651
+",16,dsp1_19,uncodable
+"651
+",17,dsp1_08,shortcut
+"651
+",18,dsp1_22,shortcut liberal
+"651
+",19,dsp1_14,uncodable
+"651
+",20,dsp1_23,uncodable
+"653
+",1,dsp1_10,learned
+"653
+",2,dsp1_19,rev learned liberal
+"653
+",3,dsp1_03,learned
+"653
+",4,dsp1_18,learned
+"653
+",5,dsp1_17,learned
+"653
+",6,dsp1_22,uncodable
+"653
+",7,dsp1_07,learned liberal
+"653
+",8,dsp1_02,learned
+"653
+",9,dsp1_08,rev learned liberal
+"653
+",10,dsp1_13,rev learned
+"653
+",11,dsp1_21,learned
+"653
+",12,dsp1_16,learned
+"653
+",13,dsp1_06,rev learned
+"653
+",14,dsp1_05,learned
+"653
+",15,dsp1_14,learned
+"653
+",16,dsp1_24,learned
+"653
+",17,dsp1_04,learned liberal
+"653
+",18,dsp1_23,Failure
+"653
+",19,dsp1_11,rev learned
+"653
+",20,dsp1_09,learned liberal
+"656
+",1,dsp1_22,learned
+"656
+",2,dsp1_04,learned
+"656
+",3,dsp1_17,rev learned
+"656
+",4,dsp1_24,learned
+"656
+",5,dsp1_05,learned liberal
+"656
+",6,dsp1_16,shortcut
+"656
+",7,dsp1_02,learned
+"656
+",8,dsp1_10,Failure
+"656
+",9,dsp1_21,shortcut
+"656
+",10,dsp1_11,Failure
+"656
+",11,dsp1_18,Failure
+"656
+",12,dsp1_06,learned liberal
+"656
+",13,dsp1_09,shortcut liberal
+"656
+",14,dsp1_13,rev learned
+"656
+",15,dsp1_14,learned
+"656
+",16,dsp1_23,learned liberal
+"656
+",17,dsp1_07,learned liberal
+"656
+",18,dsp1_08,rev learned liberal
+"656
+",19,dsp1_03,learned liberal
+"656
+",20,dsp1_19,rev learned liberal
+"657
+",1,dsp1_04,learned
+"657
+",2,dsp1_16,learned
+"657
+",3,dsp1_13,rev learned liberal
+"657
+",4,dsp1_19,learned
+"657
+",5,dsp1_05,learned
+"657
+",6,dsp1_21,Failure
+"657
+",7,dsp1_18,learned
+"657
+",8,dsp1_03,learned liberal
+"657
+",9,dsp1_07,learned
+"657
+",10,dsp1_10,shortcut
+"657
+",11,dsp1_24,learned
+"657
+",12,dsp1_22,Failure
+"657
+",13,dsp1_23,learned
+"657
+",14,dsp1_14,uncodable
+"657
+",15,dsp1_09,learned liberal
+"657
+",16,dsp1_08,shortcut liberal
+"657
+",17,dsp1_17,shortcut liberal
+"657
+",18,dsp1_06,learned liberal
+"657
+",19,dsp1_11,shortcut
+"657
+",20,dsp1_02,shortcut liberal
+"658
+",1,dsp1_07,uncodable
+"658
+",2,dsp1_10,rev learned liberal
+"658
+",3,dsp1_21,uncodable
+"658
+",4,dsp1_22,Failure
+"658
+",5,dsp1_06,shortcut liberal
+"658
+",6,dsp1_04,shortcut
+"658
+",7,dsp1_05,shortcut liberal
+"658
+",8,dsp1_17,Failure
+"658
+",9,dsp1_02,rev learned liberal
+"658
+",10,dsp1_08,rev learned liberal
+"658
+",11,dsp1_18,uncodable
+"658
+",12,dsp1_11,learned liberal
+"658
+",13,dsp1_13,uncodable
+"658
+",14,dsp1_14,shortcut
+"658
+",15,dsp1_19,uncodable
+"658
+",16,dsp1_03,shortcut
+"658
+",17,dsp1_23,learned liberal
+"658
+",18,dsp1_24,shortcut
+"658
+",19,dsp1_09,shortcut liberal
+"658
+",20,dsp1_16,learned
+"660
+",1,dsp1_19,uncodable
+"660
+",2,dsp1_07,shortcut liberal
+"660
+",3,dsp1_05,shortcut liberal
+"660
+",4,dsp1_13,uncodable
+"660
+",5,dsp1_14,uncodable
+"660
+",6,dsp1_10,uncodable
+"660
+",7,dsp1_03,shortcut
+"660
+",8,dsp1_21,shortcut
+"660
+",9,dsp1_23,shortcut liberal
+"660
+",10,dsp1_04,shortcut
+"660
+",11,dsp1_06,shortcut liberal
+"660
+",12,dsp1_08,uncodable
+"660
+",13,dsp1_11,shortcut liberal
+"660
+",14,dsp1_09,shortcut
+"660
+",15,dsp1_16,shortcut
+"660
+",16,dsp1_02,uncodable
+"660
+",17,dsp1_22,learned liberal
+"660
+",18,dsp1_24,rev learned liberal
+"660
+",19,dsp1_18,shortcut
+"660
+",20,dsp1_17,shortcut
+"662
+",1,dsp1_06,reverse learned
+"662
+",2,dsp1_05,shortcut
+"662
+",3,dsp1_09,shortcut liberal
+"662
+",4,dsp1_04,shortcut
+"662
+",5,dsp1_23,learned liberal
+"662
+",6,dsp1_10,learned
+"662
+",7,dsp1_08,shortcut
+"662
+",8,dsp1_13,shortcut liberal
+"662
+",9,dsp1_18,learned liberal
+"662
+",10,dsp1_17,rev learned liberal
+"662
+",11,dsp1_24,learned
+"662
+",12,dsp1_21,uncodable
+"662
+",13,dsp1_22,shortcut liberal
+"662
+",14,dsp1_19,rev learned liberal
+"662
+",15,dsp1_14,shortcut
+"662
+",16,dsp1_02,uncodable
+"662
+",17,dsp1_03,shortcut liberal
+"662
+",18,dsp1_11,shortcut liberal
+"662
+",19,dsp1_16,learned liberal
+"662
+",20,dsp1_07,uncodable
+"663
+",1,dsp1_02,Failure
+"663
+",2,dsp1_04,Failure
+"663
+",3,dsp1_23,learned liberal
+"663
+",4,dsp1_21,shortcut
+"663
+",5,dsp1_18,learned liberal
+"663
+",6,dsp1_09,shortcut liberal
+"663
+",7,dsp1_03,learned liberal
+"663
+",8,dsp1_10,shortcut
+"663
+",9,dsp1_08,Failure
+"663
+",10,dsp1_06,Failure
+"663
+",11,dsp1_13,uncodable
+"663
+",12,dsp1_07,learned liberal
+"663
+",13,dsp1_16,shortcut
+"663
+",14,dsp1_19,learned liberal
+"663
+",15,dsp1_22,Failure
+"663
+",16,dsp1_17,rev learned liberal
+"663
+",17,dsp1_11,uncodable
+"663
+",18,dsp1_05,shortcut
+"663
+",19,dsp1_24,learned
+"663
+",20,dsp1_14,shortcut
+"664
+",1,dsp1_24,learned
+"664
+",2,dsp1_19,rev learned liberal
+"664
+",3,dsp1_16,shortcut
+"664
+",4,dsp1_11,rev learned liberal
+"664
+",5,dsp1_03,learned liberal
+"664
+",6,dsp1_04,shortcut
+"664
+",7,dsp1_17,rev learned liberal
+"664
+",8,dsp1_22,Failure
+"664
+",9,dsp1_23,shortcut
+"664
+",10,dsp1_02,shortcut
+"664
+",11,dsp1_10,shortcut
+"664
+",12,dsp1_06,shortcut
+"664
+",13,dsp1_08,Failure
+"664
+",14,dsp1_07,shortcut liberal
+"664
+",15,dsp1_18,Failure
+"664
+",16,dsp1_05,shortcut liberal
+"664
+",17,dsp1_13,learned liberal
+"664
+",18,dsp1_14,learned
+"664
+",19,dsp1_09,Failure
+"664
+",20,dsp1_21,shortcut
+"665
+",1,dsp1_22,Failure
+"665
+",2,dsp1_04,shortcut
+"665
+",3,dsp1_24,uncodable
+"665
+",4,dsp1_05,shortcut liberal
+"665
+",5,dsp1_07,shortcut liberal
+"665
+",6,dsp1_06,shortcut
+"665
+",7,dsp1_16,learned
+"665
+",8,dsp1_10,Failure
+"665
+",9,dsp1_21,uncodable
+"665
+",10,dsp1_03,shortcut
+"665
+",11,dsp1_09,shortcut
+"665
+",12,dsp1_14,uncodable
+"665
+",13,dsp1_18,Failure
+"665
+",14,dsp1_13,learned liberal
+"665
+",15,dsp1_23,shortcut liberal
+"665
+",16,dsp1_08,shortcut
+"665
+",17,dsp1_02,shortcut
+"665
+",18,dsp1_19,shortcut liberal
+"665
+",19,dsp1_17,learned liberal
+"665
+",20,dsp1_11,shortcut liberal
+"666
+",1,dsp1_24,shortcut
+"666
+",2,dsp1_18,shortcut
+"666
+",3,dsp1_04,shortcut
+"666
+",4,dsp1_10,shortcut
+"666
+",5,dsp1_21,shortcut
+"666
+",6,dsp1_08,shortcut
+"666
+",7,dsp1_17,shortcut liberal
+"666
+",8,dsp1_16,shortcut
+"666
+",9,dsp1_02,uncodable
+"666
+",10,dsp1_19,uncodable
+"666
+",11,dsp1_23,shortcut liberal
+"666
+",12,dsp1_13,reverse learned
+"666
+",13,dsp1_11,shortcut liberal
+"666
+",14,dsp1_06,reverse learned
+"666
+",15,dsp1_03,shortcut
+"666
+",16,dsp1_14,shortcut
+"666
+",17,dsp1_05,rev learned liberal
+"666
+",18,dsp1_09,shortcut
+"666
+",19,dsp1_07,shortcut liberal
+"666
+",20,dsp1_22,shortcut
+"667
+",1,dsp1_18,Failure
+"667
+",2,dsp1_22,learned
+"667
+",3,dsp1_19,learned liberal
+"667
+",4,dsp1_10,Failure
+"667
+",5,dsp1_07,shortcut liberal
+"667
+",6,dsp1_13,learned liberal
+"667
+",7,dsp1_08,uncodable
+"667
+",8,dsp1_03,Failure
+"667
+",9,dsp1_02,Failure
+"667
+",10,dsp1_05,shortcut liberal
+"667
+",11,dsp1_21,learned
+"667
+",12,dsp1_14,rev learned liberal
+"667
+",13,dsp1_23,learned liberal
+"667
+",14,dsp1_06,reverse learned
+"667
+",15,dsp1_04,shortcut
+"667
+",16,dsp1_16,uncodable
+"667
+",17,dsp1_11,learned liberal
+"667
+",18,dsp1_09,learned liberal
+"667
+",19,dsp1_17,shortcut liberal
+"667
+",20,dsp1_24,learned liberal
+"668
+",1,dsp1_10,learned
+"668
+",2,dsp1_16,learned
+"668
+",3,dsp1_17,reverse learned
+"668
+",4,dsp1_14,learned liberal
+"668
+",5,dsp1_23,learned
+"668
+",6,dsp1_02,learned liberal
+"668
+",7,dsp1_21,learned liberal
+"668
+",8,dsp1_19,learned liberal
+"668
+",9,dsp1_13,shortcut liberal
+"668
+",10,dsp1_07,Failure
+"668
+",11,dsp1_11,learned liberal
+"668
+",12,dsp1_04,Failure
+"668
+",13,dsp1_06,reverse learned
+"668
+",14,dsp1_05,shortcut liberal
+"668
+",15,dsp1_03,learned liberal
+"668
+",16,dsp1_24,shortcut liberal
+"668
+",17,dsp1_08,shortcut liberal
+"668
+",18,dsp1_09,shortcut liberal
+"668
+",19,dsp1_22,learned liberal
+"668
+",20,dsp1_18,uncodable
+"669
+",1,dsp1_06,shortcut
+"669
+",2,dsp1_07,rev learned liberal
+"669
+",3,dsp1_11,shortcut liberal
+"669
+",4,dsp1_24,uncodable
+"669
+",5,dsp1_05,shortcut
+"669
+",6,dsp1_10,shortcut
+"669
+",7,dsp1_04,shortcut
+"669
+",8,dsp1_18,shortcut
+"669
+",9,dsp1_17,rev learned liberal
+"669
+",10,dsp1_16,shortcut
+"669
+",11,dsp1_03,shortcut
+"669
+",12,dsp1_22,uncodable
+"669
+",13,dsp1_13,learned liberal
+"669
+",14,dsp1_09,rev learned liberal
+"669
+",15,dsp1_02,shortcut
+"669
+",16,dsp1_14,shortcut
+"669
+",17,dsp1_08,rev learned liberal
+"669
+",18,dsp1_19,shortcut
+"669
+",19,dsp1_23,shortcut liberal
+"669
+",20,dsp1_21,shortcut
+"670
+",1,dsp1_13,uncodable
+"670
+",2,dsp1_16,learned
+"670
+",3,dsp1_02,uncodable
+"670
+",4,dsp1_03,learned
+"670
+",5,dsp1_07,rev learned liberal
+"670
+",6,dsp1_11,rev learned liberal
+"670
+",7,dsp1_23,learned liberal
+"670
+",8,dsp1_17,learned liberal
+"670
+",9,dsp1_08,shortcut
+"670
+",10,dsp1_24,uncodable
+"670
+",11,dsp1_14,shortcut
+"670
+",12,dsp1_19,shortcut liberal
+"670
+",13,dsp1_06,shortcut
+"670
+",14,dsp1_22,learned liberal
+"670
+",15,dsp1_18,learned
+"670
+",16,dsp1_21,uncodable
+"670
+",17,dsp1_05,shortcut liberal
+"670
+",18,dsp1_04,shortcut
+"670
+",19,dsp1_09,shortcut liberal
+"670
+",20,dsp1_10,rev learned liberal
