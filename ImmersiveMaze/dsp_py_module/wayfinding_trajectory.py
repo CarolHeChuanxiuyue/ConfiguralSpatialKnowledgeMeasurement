@@ -1,9 +1,12 @@
 # Carol He: carol.hcxy@gmail.com
 import pathlib
 
-from dsp_py_module.data_storage import DataStorage
+# from dsp_py_module.data_storage import DataStorage
+from data_storage import DataStorage
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 
 class WayFindingTrajectory:
@@ -156,3 +159,15 @@ class WayFindingTrajectory:
     def save_processed(self,filename):
         self.get_processed_dataframe().to_csv(filename,index=False)
         pass
+
+    def plot_map(self):
+
+        x_points = self._xgrid
+        y_points = self._ygrid
+
+        fig, ax = plt.subplots()
+        for x, y in zip(x_points, y_points):
+            ax.add_patch(plt.Polygon(x,y))
+        ax.set_xlim([min(x_points) - 1, max(x_points) + 1])
+        ax.set_ylim([min(y_points) - 1, max(y_points) + 1])
+        plt.show()
