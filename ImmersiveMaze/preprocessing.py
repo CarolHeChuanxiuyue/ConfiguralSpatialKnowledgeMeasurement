@@ -32,7 +32,8 @@ def main():
         shortcut_map=shortcut_map,
         learning_map=learning_map)
 
-    analyzer.calculate_frechet()
+    # analyzer.calculate_frechet()
+    analyzer.plot_discrete_trajectory_for_one_subject(401, 1)
 
 
 if __name__ == '__main__':

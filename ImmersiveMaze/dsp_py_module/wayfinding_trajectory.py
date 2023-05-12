@@ -214,53 +214,7 @@ class WayFindingTrajectory:
 
         return trial_id, subject_id, top, target
 
-    def plot_map(self, trajectory_tuple=None):
 
-        x_points = self._xgrid
-        y_points = self._ygrid
-
-        fig, ax = plt.subplots()
-
-        for i in range(len(x_points) - 1):
-            for j in range(len(y_points) - 1):
-                rect = patches.Rectangle((x_points[i], y_points[j]), x_points[i + 1] - x_points[i],
-                                         y_points[j + 1] - y_points[j], linewidth=1, edgecolor='gray', facecolor='none')
-                ax.add_patch(rect)
-
-            # check trajectory data is a tuple and not none
-            if trajectory_tuple is not None and isinstance(trajectory_tuple, tuple):
-                continuous_trajectory, discrete_trajectory = trajectory_tuple
-
-                if continuous_trajectory is not None:
-                    # get the title of the trajectory
-
-                    trial_id, subject_id, top, target = self.get_trial_info(continuous_trajectory)
-
-                    title = 'Subject ' + str(subject_id) + ' Trial ' + str(trial_id) + \
-                            '\n From: ' + str(top) + ' To ' + str(target)
-                    ax.set_title(title)
-
-                    # plot lines using the X and Z columns of the dataframe
-                    ax.plot(continuous_trajectory['X'], continuous_trajectory['Z'], color='green', linewidth=1)
-
-                    if discrete_trajectory is not None:
-                        # plot a connected scatter plot using the dX and dZ columns of the dataframe and step
-                        # ax.step(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='red', linewidth=1)
-                        ax.scatter(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='red', s=20)
-                elif discrete_trajectory is not None:
-                    ax.step(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='red', linewidth=1)
-
-        ax.set_xlim([min(x_points), max(x_points)])
-        ax.set_ylim([min(y_points), max(y_points)])
-        ax.set_aspect('equal')
-        # remove default ticks
-        # ax.set_xticks(x_points, labels=x_points, minor=True)
-        # ax.set_yticks(y_points, labels=y_points, minor=True)
-
-        # set size of plot
-        fig.set_size_inches(10, 10)
-
-        plt.show()
 
     def get_raw_trajectory(self, subject_num, trial_num):
         raw_df = self.get_raw_dataframe()
@@ -372,24 +326,4 @@ class WayFindingTrajectory:
 
         final_trajectory.to_csv(save_name, index=False)
 
-    def plot_raw_trajectory_on_map(self, subject_num, trial_num):
-        raw_df = self.get_raw_trajectory(subject_num, trial_num)
-        self.plot_map(raw_df)
 
-    def plot_discrete_trajectory_for_one_subject(self, subject_num, trial_num):
-        raw_trajectory = self.get_raw_trajectory(subject_num, trial_num)
-        # run lambda function on each row of the dataframe by calling get_closest_tile for X and Z columns
-        discrete_trajectory = self.convert_to_discrete(raw_trajectory)
-
-        self.plot_map((raw_trajectory, discrete_trajectory))
-        pass
-
-    def plot_all_discrete_trajectories_on_map(self):
-        # get the unique subject numbers
-        subject_nums = self.get_raw_dataframe()['SubjectNum'].unique()
-        for subject_num in subject_nums:
-            # get the unique trial numbers
-            trial_nums = self.get_raw_dataframe()['TrialNum'].unique()
-            for trial_num in trial_nums:
-                print("Plotting subject " + str(subject_num) + " trial " + str(trial_num))
-                self.plot_discrete_trajectory_for_one_subject(subject_num, trial_num)

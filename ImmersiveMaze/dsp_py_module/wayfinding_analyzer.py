@@ -1,12 +1,15 @@
 # rongfei@ucsb.edu; carol.hcxy@gmail.com
 import pathlib
 
+from matplotlib import pyplot as plt, patches
+
 from dsp_py_module.data_storage import DataStorage
 import numpy as np
 import pandas as pd
 import similaritymeasures
 
 from dsp_py_module.strategies import Strategy
+
 
 
 class WayFindingAnalyzer:
@@ -28,6 +31,9 @@ class WayFindingAnalyzer:
         self._shortcut_map = shortcut_map
         self._learning_map = learning_map
         # self.strategy = Strategy("survey_coords.txt", "survey_landmarks.txt")
+
+        self._xgrid = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
+        self._ygrid = [-3.7, -2.49, -1.49, -0.49, 0.49, 1.35, 2.10, 3.7]
 
     def analyze(self):
         for file in self._files_paths:
@@ -164,3 +170,84 @@ class WayFindingAnalyzer:
     @staticmethod
     def get_participant_id(array):
         return int(array[(0, 0)])
+
+    def plot_map(self, trajectory_tuple=None):
+        x_points = self._xgrid
+        y_points = self._ygrid
+
+        fig, ax = plt.subplots()
+
+        for i in range(len(x_points) - 1):
+            for j in range(len(y_points) - 1):
+                rect = patches.Rectangle((x_points[i], y_points[j]), x_points[i + 1] - x_points[i],
+                                         y_points[j + 1] - y_points[j], linewidth=1, edgecolor='gray', facecolor='none')
+                ax.add_patch(rect)
+
+            # check trajectory data is a tuple and not none
+            if trajectory_tuple is not None and isinstance(trajectory_tuple, tuple):
+                continuous_trajectory, discrete_trajectory = trajectory_tuple
+
+                if continuous_trajectory is not None:
+                    # get the title of the trajectory
+
+                    trial_id, subject_id, top, target = self.get_trial_info(continuous_trajectory)
+
+                    title = 'Subject ' + str(subject_id) + ' Trial ' + str(trial_id) + \
+                            '\n From: ' + str(top) + ' To ' + str(target)
+                    ax.set_title(title)
+
+                    # plot lines using the X and Z columns of the dataframe
+                    ax.plot(continuous_trajectory['X'], continuous_trajectory['Z'], color='green', linewidth=1)
+
+                    if discrete_trajectory is not None:
+                        # plot a connected scatter plot using the dX and dZ columns of the dataframe and step
+                        ax.step(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='pink', linewidth=1)
+                        ax.scatter(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='red', s=20)
+                elif discrete_trajectory is not None:
+                    ax.step(discrete_trajectory['dX'], discrete_trajectory['dZ'], color='red', linewidth=1)
+
+        ax.set_xlim([min(x_points), max(x_points)])
+        ax.set_ylim([min(y_points), max(y_points)])
+        ax.set_aspect('equal')
+        # remove default ticks
+        # ax.set_xticks(x_points, labels=x_points, minor=True)
+        # ax.set_yticks(y_points, labels=y_points, minor=True)
+
+        # set size of plot
+        fig.set_size_inches(10, 10)
+
+        plt.show()
+
+    def plot_raw_trajectory_on_map(self, subject_num, trial_num):
+        raw_df = self.get_raw_trajectory(subject_num, trial_num)
+        self.plot_map(raw_df)
+
+    def plot_discrete_trajectory_for_one_subject(self, subject_num, trial_num):
+        raw_trajectory = self.get_raw_trajectory(subject_num, trial_num)
+        # run lambda function on each row of the dataframe by calling get_closest_tile for X and Z columns
+        discrete_trajectory = self.get_discrete_trajectory(subject_num, trial_num)
+
+        self.plot_map((raw_trajectory, discrete_trajectory))
+        pass
+
+    def plot_all_discrete_trajectories_on_map(self):
+        # get the unique subject numbers
+        subject_nums = self.get_raw_dataframe()['SubjectNum'].unique()
+        for subject_num in subject_nums:
+            # get the unique trial numbers
+            trial_nums = self.get_raw_dataframe()['TrialNum'].unique()
+            for trial_num in trial_nums:
+                print("Plotting subject " + str(subject_num) + " trial " + str(trial_num))
+                self.plot_discrete_trajectory_for_one_subject(subject_num, trial_num)
+
+    def get_raw_trajectory(self, subject_num, trial_num):
+        print(self._input_df)
+        return self._input_df[
+            (self._input_df['SubjectNum'] == subject_num) & (self._input_df['TrialNum'] == trial_num)]
+
+    def get_discrete_trajectory(self, subject_num, trial_num):
+        return self._discrete_df[
+            (self._discrete_df['SubjectNum'] == subject_num) & (self._discrete_df['TrialNum'] == trial_num)]
+
+    def get_raw_dataframe(self):
+        return self._input_df
