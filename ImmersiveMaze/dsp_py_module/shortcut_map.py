@@ -102,6 +102,17 @@ class ShortcutMap:
             return None
         return distance, [self.get_tile_center(pos) for pos in path]
 
+    def convert_to_tile_path(self, path):
+        return [self.get_tile_center(pos) for pos in path]
+
+    def get_shortest_distance_in_tiles(self, start_object, end_object):
+        path = self.get_shortest_path_in_tiles(start_object, end_object)
+        # numpy norm
+        distance = 0
+        for i in range(len(path) - 1):
+            distance += np.linalg.norm(path[i] - path[i + 1])
+        return distance
+
     def get_shortest_distance(self, start_object, end_object):
         return self.get_shortest_path(start_object, end_object)[0]
 
@@ -262,16 +273,49 @@ class ShortcutMap:
                         [start_name, start_obj[0], start_obj[1], end_name, end_obj[0], end_obj[1],
                          shortest_distance, path])
 
+    def save_survey_map(self):
+        x_points = self.grid_x
+        y_points = self.grid_y
+        tile_map = [[100 for _ in range(len(x_points) - 1)] for _ in range(len(y_points) - 1)]
+        for col in range(len(x_points) - 1):
+            for row in range(len(y_points) - 1):
+                if not self.check_coord_is_wall((col, row)):
+                    # get the center point of the tile
+                    w = abs(x_points[col] - x_points[col + 1])
+                    h = abs(y_points[row] - y_points[row + 1])
+                    area = w*h
+                    tile_map[row][col] = 1
+
+        resized_map = [[120]*(len(x_points)+1) for _ in range(len(y_points)+1)]
+        for i in range(len(x_points)-1):
+            for j in range(len(y_points)-1):
+                resized_map[i+1][j+1] = tile_map[i][j]
+
+        # convert resize_map to numpy array
+        resized_map = np.array(resized_map)
+
+        with open("survey_map.txt", "w", newline="") as csvfile:
+            for i in range(len(x_points)+1):
+                for j in range(len(y_points)+1):
+                    csvfile.write(f"{i+1}\t{j+1}\t{resized_map[i][j]}\n")
+
+        with open("landmarks_on_survey_map.txt", "w", newline="") as csvfile:
+            for obj in self.objects:
+                pos = self.objects[obj]
+                csvfile.write(f"{obj},{pos[1]+2},{pos[0]+2}\n")
+            pass
+        # show the map
+        # import matplotlib.pyplot as plt
+        # plt.matshow(resized_map, cmap='gray')
+        # plt.show()
 
 def print_matrix(matrix):
     for row in matrix:
         print(row)
 
 
+
+
 if __name__ == "__main__":
     xgrid = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
     ygrid = [-3.7, -2.49, -1.49, -0.49, 0.49, 1.35, 2.10, 3.7]
-    tilemap = get_tile_map(xgrid, ygrid)
-    print_matrix(tilemap)
-    mat = generate_connectivity_matrix(xgrid, ygrid)
-    print_matrix(mat)

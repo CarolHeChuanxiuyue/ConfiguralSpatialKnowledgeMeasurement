@@ -86,7 +86,7 @@ class WayFindingTrajectory:
                 flag = tmp[tmp['Participant ID'] != 'Participant ID'].reset_index().groupby('Level')[
                     'index'].first().reset_index()
                 for i in restart_flag:
-                    ### check if the previous trial completed or disrupted
+                    # check if the previous trial completed or disrupted
                     if tmp.loc[i - 1, "Level"] in tmp.loc[tmp.index > i]['Level'].unique():
                         end = i + 1
                         start = flag.sort_values('index').loc[flag['index'] < end]['index'].tail(1).values[0]
@@ -171,10 +171,12 @@ class WayFindingTrajectory:
         return array
 
     def trial_info(self, level_id):
-        start_x = self._trial_info[self._trial_info[:, 0] == level_id, 1][0]
-        start_y = self._trial_info[self._trial_info[:, 0] == level_id, 2][0]
-        end_x = self._trial_info[self._trial_info[:, 0] == level_id, 3][0]
-        end_y = self._trial_info[self._trial_info[:, 0] == level_id, 4][0]
+        # get the row where TrialNum matches level_id
+        trial = self._trial_info[self._trial_info['TrialID'] == level_id].reset_index()
+        start_x = trial['start_x'].values[0]
+        start_y = trial['start_y'].values[0]
+        end_x = trial['end_x'].values[0]
+        end_y = trial['end_y'].values[0]
         return [start_x, start_y, end_x, end_y]
 
     def get_raw_dataframe(self):
@@ -214,8 +216,6 @@ class WayFindingTrajectory:
 
         return trial_id, subject_id, top, target
 
-
-
     def get_raw_trajectory(self, subject_num, trial_num):
         raw_df = self.get_raw_dataframe()
         # get the rows where SubjectNum and TrialNum match
@@ -224,7 +224,7 @@ class WayFindingTrajectory:
 
     def get_discrete_trajectory(self, subject_num, trial_num):
         if self._discrete_trajectory is None:
-            self.convert_all_to_discrete()
+            self.save_discrete()
         return self._discrete_trajectory[(self._discrete_trajectory['SubjectNum'] == subject_num) & (
                 self._discrete_trajectory['TrialNum'] == trial_num)]
 
@@ -308,7 +308,7 @@ class WayFindingTrajectory:
 
         return discrete_trajectory
 
-    def convert_all_to_discrete(self, save_name="ProcessedData/discrete_trajectory.csv"):
+    def save_discrete(self, save_name="ProcessedData/discrete_trajectory.csv"):
         raw_df = self.get_raw_dataframe()
         # get the unique subject numbers
         subject_nums = raw_df['SubjectNum'].unique()
@@ -325,5 +325,3 @@ class WayFindingTrajectory:
                 final_trajectory = pd.concat([final_trajectory, discrete_trajectory], ignore_index=True)
 
         final_trajectory.to_csv(save_name, index=False)
-
-

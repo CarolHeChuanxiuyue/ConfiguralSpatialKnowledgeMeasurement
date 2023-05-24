@@ -5,3 +5,4 @@ from dsp_py_module.read_pointing_data import Pointing
 from dsp_py_module.retracing_txt_verifier import RetracingTxtVerifier
 from dsp_py_module.data_storage import DataStorage
 from dsp_py_module.shortcut_map import ShortcutMap
+from dsp_py_module.strategies import Strategy

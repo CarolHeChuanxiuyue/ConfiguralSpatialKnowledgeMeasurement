@@ -1,0 +1,12 @@
+Mailbox,2,3
+Chair,2,6
+Plant,3,2
+Well,3,7
+Harp,4,7
+Telescope,5,2
+Wheelbarrow,5,5
+Bookshelf,6,7
+Trashcan,6,8
+Table,7,3
+Stove,8,2
+Piano,8,7
