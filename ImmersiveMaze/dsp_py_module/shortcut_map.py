@@ -3,6 +3,19 @@ import csv
 import heapq
 import numpy as np
 
+learning_order = ["Chair",
+                  "Mailbox",
+                  "Plant",
+                  "Telescope",
+                  "Table",
+                  "Stove",
+                  "Piano",
+                  "Trashcan",
+                  "Bookshelf",
+                  "Wheelbarrow",
+                  "Harp",
+                  "Well"]
+
 
 def load_objects(file_name):
     objects = {}
@@ -73,7 +86,12 @@ def generate_connectivity_matrix(grid_x, grid_y, tile_map):
 
 
 class ShortcutMap:
-    def __init__(self, wall_file, object_file, shortest_distance_file):
+    def __init__(self, wall_file, object_file,
+                 shortcut_output_file="shortcut_paths.csv",
+                 learning_output_file="learning_paths.csv",
+                 reverse_learning_output_file="reverse_learning_paths.csv",
+                 learning=False
+                 ):
         self.map_width = 7
         self.map_height = 7
         self.grid_x = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
@@ -83,7 +101,45 @@ class ShortcutMap:
         self.load_walls(wall_file)
         self.objects = load_objects(object_file)
         self.shortest_paths = self.calculate_shortest_paths()
-        self.save_shortest_distances(shortest_distance_file)
+        self.learning_paths = None
+        self.reverse_learning_paths = None
+        if learning:
+            self.learning_paths = self.calculate_learning_path(learning_order)
+            self.reverse_learning_paths = self.calculate_learning_path(learning_order[::-1])
+            self.save_shortest_distances(learning_output_file, self.learning_paths)
+            self.save_shortest_distances(reverse_learning_output_file, self.reverse_learning_paths)
+        else:
+            self.save_shortest_distances(shortcut_output_file, self.shortest_paths)
+
+    def calculate_learning_path(self, order):
+        # get path for consecutive objects and handle the last object to first object case
+        path = dict()
+        for i in range(len(order)):
+            path[order[i]] = dict()
+
+        for i in range(len(order)):
+            for j in range(len(order)):
+                if i != j:
+                    if i < j:
+                        seq = order[i:j + 1]
+                    else:
+                        seq = order[i:] + order[:j + 1]
+
+                    new_path = []
+                    for k in range(len(seq) - 1):
+                        # concatenate the paths
+                        new_path += self.get_shortest_path(seq[k], seq[k + 1])[1]
+                    # remove duplicates in new_path
+                    new_path = list(dict.fromkeys(new_path))
+
+                    path[order[i]][order[j]] = (len(new_path), new_path)
+        return path
+
+    def get_learning_path(self, start_object, end_object):
+        return self.learning_paths[start_object][end_object]
+
+    def get_reverse_learning_path(self, start_object, end_object):
+        return self.reverse_learning_paths[start_object][end_object]
 
     def get_shortest_path(self, start_object, end_object):
         try:
@@ -257,17 +313,17 @@ class ShortcutMap:
         path = self.reconstruct_path(prev, index2, coord=True)
         return path
 
-    def save_shortest_distances(self, file_name):
+    def save_shortest_distances(self, file_name, paths):
         with open(file_name, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(
                 ["Object1", "Object1_X", "Object1_Y", "Object2", "Object2_X", "Object2_Y", "Shortest_Distance", "Path"])
 
-            for start_name in self.shortest_paths.keys():
-                for end_name in self.shortest_paths[start_name].keys():
+            for start_name in paths.keys():
+                for end_name in paths[start_name].keys():
                     start_obj = self.objects[start_name]
                     end_obj = self.objects[end_name]
-                    shortest_distance, path = self.shortest_paths[start_name][end_name]
+                    shortest_distance, path = paths[start_name][end_name]
                     path = "->".join([str(coord) for coord in path])
                     writer.writerow(
                         [start_name, start_obj[0], start_obj[1], end_name, end_obj[0], end_obj[1],
@@ -283,37 +339,36 @@ class ShortcutMap:
                     # get the center point of the tile
                     w = abs(x_points[col] - x_points[col + 1])
                     h = abs(y_points[row] - y_points[row + 1])
-                    area = w*h
+                    area = w * h
                     tile_map[row][col] = 1
 
-        resized_map = [[120]*(len(x_points)+1) for _ in range(len(y_points)+1)]
-        for i in range(len(x_points)-1):
-            for j in range(len(y_points)-1):
-                resized_map[i+1][j+1] = tile_map[i][j]
+        resized_map = [[120] * (len(x_points) + 1) for _ in range(len(y_points) + 1)]
+        for i in range(len(x_points) - 1):
+            for j in range(len(y_points) - 1):
+                resized_map[i + 1][j + 1] = tile_map[i][j]
 
         # convert resize_map to numpy array
         resized_map = np.array(resized_map)
 
         with open("survey_map.txt", "w", newline="") as csvfile:
-            for i in range(len(x_points)+1):
-                for j in range(len(y_points)+1):
-                    csvfile.write(f"{i+1}\t{j+1}\t{resized_map[i][j]}\n")
+            for i in range(len(x_points) + 1):
+                for j in range(len(y_points) + 1):
+                    csvfile.write(f"{i + 1}\t{j + 1}\t{resized_map[i][j]}\n")
 
         with open("landmarks_on_survey_map.txt", "w", newline="") as csvfile:
             for obj in self.objects:
                 pos = self.objects[obj]
-                csvfile.write(f"{obj},{pos[1]+2},{pos[0]+2}\n")
+                csvfile.write(f"{obj},{pos[1] + 2},{pos[0] + 2}\n")
             pass
         # show the map
         # import matplotlib.pyplot as plt
         # plt.matshow(resized_map, cmap='gray')
         # plt.show()
 
+
 def print_matrix(matrix):
     for row in matrix:
         print(row)
-
-
 
 
 if __name__ == "__main__":

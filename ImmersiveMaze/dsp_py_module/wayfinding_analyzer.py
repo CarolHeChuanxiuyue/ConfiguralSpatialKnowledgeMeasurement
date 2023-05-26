@@ -4,6 +4,7 @@ import os
 
 from matplotlib import pyplot as plt, patches
 
+from dsp_py_module.shortcut_map import ShortcutMap
 from dsp_py_module.data_storage import DataStorage
 import numpy as np
 import pandas as pd
@@ -12,14 +13,25 @@ import similaritymeasures
 from dsp_py_module.strategies import Strategy
 
 
+def compute_distance(path):
+    """
+    Compute the distance of a path
+    :param path: a list of points
+    :return: the distance of the path
+    """
+    distance = 0
+    for i in range(len(path) - 1):
+        distance += np.linalg.norm(path[i + 1] - path[i])
+    return distance
+
 class WayFindingAnalyzer:
     euclidean_distance_data_type = [('ParticipantID', 'i4'), ('TrialNumber', 'i4'),
                                     ('LevelDistanceTraveled', 'f4')]
 
     def __init__(self, trial_info, time_csv, cleaned_up_csv, discrete_csv,
                  strategy=None,
-                 shortcut_map=None,
-                 learning_map=None):
+                 shortcut_map: ShortcutMap = None,
+                 learning_map: ShortcutMap = None):
         self._trial_info = pd.read_csv(trial_info, delimiter=",")
         self._input_df = pd.read_csv(cleaned_up_csv)
         # self._euclidean_distance_array = np.empty(0, dtype=self.euclidean_distance_data_type)
@@ -70,10 +82,12 @@ class WayFindingAnalyzer:
                                            'DiscreteDistance',
                                            'ContinuousDistance',
                                            'FrechetLearn',
+                                           'FrechetLearnReversed',
                                            'FrechetShortcut',
                                            'FrechetReversed',
                                            'FrechetTopo',
                                            'LearnDistance',
+                                           'ReversedLearnDistance',
                                            'ShortcutDistance',
                                            'TopoDistance',
                                            'Failure'])
@@ -105,21 +119,18 @@ class WayFindingAnalyzer:
                 continuous_distance = float(np.sum(norms[1:]))
 
                 _, shortcut = self._shortcut_map.get_shortest_path_in_tiles(start, end)
-                _, learning = self._learning_map.get_shortest_path_in_tiles(start, end)
-                reverse_learning = learning[::-1]
+                _, learning = self._learning_map.get_learning_path(start, end)
+                learning = self._learning_map.convert_to_tile_path(learning)
+                _, reverse_learning = self._learning_map.get_reverse_learning_path(start, end)
+                reverse_learning = self._learning_map.convert_to_tile_path(reverse_learning)
 
                 topo = self._shortcut_map.convert_to_tile_path(self._strategy.get_path(start, end))
 
                 # sum up the distance between each point for shortcut, learning and topo using numpy.linalg.norm
-                shortcut_distance = 0
-                learning_distance = 0
-                topo_distance = 0
-                for i in range(len(shortcut) - 1):
-                    shortcut_distance += np.linalg.norm(np.array(shortcut[i]) - np.array(shortcut[i + 1]))
-                for i in range(len(learning) - 1):
-                    learning_distance += np.linalg.norm(np.array(learning[i]) - np.array(learning[i + 1]))
-                for i in range(len(topo) - 1):
-                    topo_distance += np.linalg.norm(np.array(topo[i]) - np.array(topo[i + 1]))
+                shortcut_distance = compute_distance(shortcut)
+                learning_distance = compute_distance(learning)
+                reverse_learning_distance = compute_distance(reverse_learning)
+                topo_distance = compute_distance(topo)
 
                 # get the Status of the row where
                 # SubjectNum and TrialNum and start and end matches in the time info dataframe
@@ -145,10 +156,11 @@ class WayFindingAnalyzer:
                               'DiscreteDistance': round(discrete_distance, dec),
                               'ContinuousDistance': round(continuous_distance, dec),
                               'FrechetLearn': round(learning_index, dec),
+                              'FrechetLearnReversed': round(reversed_learning_index, dec),
                               'FrechetShortcut': round(shortcut_index, dec),
-                              'FrechetReversed': round(reversed_learning_index, dec),
                               'FrechetTopo': round(topo_index, dec),
                               'LearnDistance': round(learning_distance, dec),
+                              'ReversedLearnDistance': round(reverse_learning_distance, dec),
                               'ShortcutDistance': round(shortcut_distance, dec),
                               'TopoDistance': round(topo_distance, dec),
                               'Failure': status}

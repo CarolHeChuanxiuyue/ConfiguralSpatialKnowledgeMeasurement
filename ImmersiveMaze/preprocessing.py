@@ -25,9 +25,9 @@ def main():
     # strategy.plot_path("Mailbox", "Trashcan")
     # path = strategy.get_path("Piano", "Stove")
 
-    # strategy.get_all_topological_plots("topo_plot", save_only=True)
+    strategy.get_all_topological_plots("topo_plot", save_only=True)
 
-    learning_map = ShortcutMap("learning_walls.csv", "objects.csv", "ProcessedData/learning_shortcuts.csv")
+    learning_map = ShortcutMap("learning_walls.csv", "objects.csv", "ProcessedData/learning_shortcuts.csv" , learning=True)
     #
     # trajectory = WayFindingTrajectory(trial_info, data_path, shortcut_map=shortcut_map)
     # trajectory.clean_data_w_reboot()
@@ -46,7 +46,7 @@ def main():
         strategy=strategy,
     )
 
-    analyzer.plot_topo(401,1)
+    # analyzer.plot_topo(401,1)
     # analyzer.calculate_frechet()
     # analyzer.plot_all_discrete_trajectories_on_map(save_only=True)
 
