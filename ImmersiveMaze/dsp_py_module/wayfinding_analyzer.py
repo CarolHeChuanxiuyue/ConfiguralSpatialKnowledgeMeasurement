@@ -24,14 +24,15 @@ def compute_distance(path):
         distance += np.linalg.norm(path[i + 1] - path[i])
     return distance
 
+
 class WayFindingAnalyzer:
     euclidean_distance_data_type = [('ParticipantID', 'i4'), ('TrialNumber', 'i4'),
                                     ('LevelDistanceTraveled', 'f4')]
 
     def __init__(self, trial_info, time_csv, cleaned_up_csv, discrete_csv,
                  strategy=None,
-                 shortcut_map: ShortcutMap = None,
-                 learning_map: ShortcutMap = None):
+                 shortcut_map=None,
+                 learning_map=None):
         self._trial_info = pd.read_csv(trial_info, delimiter=",")
         self._input_df = pd.read_csv(cleaned_up_csv)
         # self._euclidean_distance_array = np.empty(0, dtype=self.euclidean_distance_data_type)
@@ -73,7 +74,7 @@ class WayFindingAnalyzer:
             status = False if status.iloc[0] == "Success" else True
         return status
 
-    def calculate_frechet(self):
+    def calculate_frechet(self, save_name="ProcessedData/frechet.csv"):
         # create a new dataframe to store the frechet distance with the following columns SubjectName, TrialNumber,
         # FrechetLearn, FrechetShortcut, FrechetReversed, LearnDistance, ShortcutDistance, Failure
         frechet_df = pd.DataFrame(columns=['SubjectName',
@@ -84,7 +85,6 @@ class WayFindingAnalyzer:
                                            'FrechetLearn',
                                            'FrechetLearnReversed',
                                            'FrechetShortcut',
-                                           'FrechetReversed',
                                            'FrechetTopo',
                                            'LearnDistance',
                                            'ReversedLearnDistance',
@@ -97,81 +97,86 @@ class WayFindingAnalyzer:
             print("Calculating Frechet distance for subject: " + str(subject_id) + "...")
             trial_nums = self._discrete_df['TrialNum'].unique()
             order = 1
-            for trial_id in trial_nums:
-                discrete_trajectory = self._discrete_df[
-                    (self._discrete_df['SubjectNum'] == subject_id) & (self._discrete_df['TrialNum'] == trial_id)]
-                continuous_trajectory = self._input_df[
-                    (self._input_df['SubjectNum'] == subject_id) & (self._input_df['TrialNum'] == trial_id)]
-                _, _, start, end = self.get_trial_info(discrete_trajectory)
+            try:
+                for trial_id in trial_nums:
+                    discrete_trajectory = self._discrete_df[
+                        (self._discrete_df['SubjectNum'] == subject_id) & (self._discrete_df['TrialNum'] == trial_id)]
 
-                # get dX and dZ and combine them into a tuple then a list
-                dX = discrete_trajectory['dX'].tolist()
-                dZ = discrete_trajectory['dZ'].tolist()
-                trajectory = list(zip(dX, dZ))
+                    continuous_trajectory = self._input_df[
+                        (self._input_df['SubjectNum'] == subject_id) & (self._input_df['TrialNum'] == trial_id)]
+                    _, _, start, end = self.get_trial_info(discrete_trajectory)
 
-                discrete_distance = 0
-                for i in range(len(trajectory) - 1):
-                    discrete_distance += abs(trajectory[i][0] - trajectory[i + 1][0]) + abs(
-                        trajectory[i][1] - trajectory[i + 1][1])
+                    # get dX and dZ and combine them into a tuple then a list
+                    dX = discrete_trajectory['dX'].tolist()
+                    dZ = discrete_trajectory['dZ'].tolist()
+                    trajectory = list(zip(dX, dZ))
 
-                diffs = continuous_trajectory[['X', 'Z']].diff()
-                norms = np.linalg.norm(diffs, axis=1)
-                continuous_distance = float(np.sum(norms[1:]))
+                    discrete_distance = 0
+                    for i in range(len(trajectory) - 1):
+                        discrete_distance += abs(trajectory[i][0] - trajectory[i + 1][0]) + abs(
+                            trajectory[i][1] - trajectory[i + 1][1])
 
-                _, shortcut = self._shortcut_map.get_shortest_path_in_tiles(start, end)
-                _, learning = self._learning_map.get_learning_path(start, end)
-                learning = self._learning_map.convert_to_tile_path(learning)
-                _, reverse_learning = self._learning_map.get_reverse_learning_path(start, end)
-                reverse_learning = self._learning_map.convert_to_tile_path(reverse_learning)
+                    diffs = continuous_trajectory[['X', 'Z']].diff()
+                    norms = np.linalg.norm(diffs, axis=1)
+                    continuous_distance = float(np.sum(norms[1:]))
 
-                topo = self._shortcut_map.convert_to_tile_path(self._strategy.get_path(start, end))
+                    _, shortcut = self._shortcut_map.get_shortest_path_in_tiles(start, end)
+                    _, learning = self._learning_map.get_learning_path(start, end)
+                    learning = self._learning_map.convert_to_tile_path(learning)
+                    _, reverse_learning = self._learning_map.get_reverse_learning_path(start, end)
+                    reverse_learning = self._learning_map.convert_to_tile_path(reverse_learning)
+                    topo = self._shortcut_map.convert_to_tile_path(self._strategy.get_path(start, end))
 
-                # sum up the distance between each point for shortcut, learning and topo using numpy.linalg.norm
-                shortcut_distance = compute_distance(shortcut)
-                learning_distance = compute_distance(learning)
-                reverse_learning_distance = compute_distance(reverse_learning)
-                topo_distance = compute_distance(topo)
+                    # sum up the distance between each point for shortcut, learning and topo using numpy.linalg.norm
+                    shortcut_distance = compute_distance(shortcut)
+                    learning_distance = compute_distance(learning)
+                    reverse_learning_distance = compute_distance(reverse_learning)
+                    topo_distance = compute_distance(topo)
 
-                # get the Status of the row where
-                # SubjectNum and TrialNum and start and end matches in the time info dataframe
-                status = self.get_status(subject_id, trial_id, start, end)
+                    # get the Status of the row where
+                    # SubjectNum and TrialNum and start and end matches in the time info dataframe
+                    status = self.get_status(subject_id, trial_id, start, end)
 
-                shortcut_index = similaritymeasures.frechet_dist(trajectory, shortcut)
-                learning_index = similaritymeasures.frechet_dist(trajectory, learning)
-                reversed_learning_index = similaritymeasures.frechet_dist(trajectory, reverse_learning)
-                topo_index = similaritymeasures.frechet_dist(trajectory, topo)
+                    shortcut_index = similaritymeasures.frechet_dist(trajectory, shortcut)
+                    learning_index = similaritymeasures.frechet_dist(trajectory, learning)
+                    reversed_learning_index = similaritymeasures.frechet_dist(trajectory, reverse_learning)
+                    topo_index = similaritymeasures.frechet_dist(trajectory, topo)
 
-                # all the values less than 0.001 are considered as 0
-                if shortcut_index < 0.001:
-                    shortcut_index = 0
-                if learning_index < 0.001:
-                    learning_index = 0
-                if reversed_learning_index < 0.001:
-                    reversed_learning_index = 0
+                    # all the values less than 0.001 are considered as 0
+                    if shortcut_index < 0.001:
+                        shortcut_index = 0
+                    if learning_index < 0.001:
+                        learning_index = 0
+                    if reversed_learning_index < 0.001:
+                        reversed_learning_index = 0
 
-                dec = 2
-                new_record = {'SubjectName': subject_id,
-                              'TrialOrder': order,
-                              'TrialNumber': trial_id,
-                              'DiscreteDistance': round(discrete_distance, dec),
-                              'ContinuousDistance': round(continuous_distance, dec),
-                              'FrechetLearn': round(learning_index, dec),
-                              'FrechetLearnReversed': round(reversed_learning_index, dec),
-                              'FrechetShortcut': round(shortcut_index, dec),
-                              'FrechetTopo': round(topo_index, dec),
-                              'LearnDistance': round(learning_distance, dec),
-                              'ReversedLearnDistance': round(reverse_learning_distance, dec),
-                              'ShortcutDistance': round(shortcut_distance, dec),
-                              'TopoDistance': round(topo_distance, dec),
-                              'Failure': status}
+                    dec = 2
+                    new_record = {'SubjectName': subject_id,
+                                  'TrialOrder': order,
+                                  'TrialNumber': trial_id,
+                                  'DiscreteDistance': round(discrete_distance, dec),
+                                  'ContinuousDistance': round(continuous_distance, dec),
+                                  'FrechetLearn': round(learning_index, dec),
+                                  'FrechetLearnReversed': round(reversed_learning_index, dec),  # 'FrechetLearnReversed
+                                  'FrechetShortcut': round(shortcut_index, dec),
+                                  'FrechetTopo': round(topo_index, dec),
+                                  'LearnDistance': round(learning_distance, dec),
+                                  'ReversedLearnDistance': round(reverse_learning_distance, dec),
+                                  'ShortcutDistance': round(shortcut_distance, dec),
+                                  'TopoDistance': round(topo_distance, dec),
+                                  'Failure': status}
 
-                order += 1
+                    order += 1
 
-                # concat the new record to the frechet dataframe as pd series
-                frechet_df = pd.concat([frechet_df, pd.DataFrame(new_record, index=[0])], axis=0, ignore_index=True)
+                    # concat the new record to the frechet dataframe as pd series
+                    frechet_df = pd.concat([frechet_df, pd.DataFrame(new_record, index=[0])], axis=0,
+                                           ignore_index=True).astype({"Failure": bool})
+            except Exception as e:
+                print("Warning!! This participants' didn't complete all trials: " + str(
+                    subject_id) + ". Please remove it")
 
         # save the frechet dataframe to csv
-        frechet_df.to_csv("ProcessedData/frechet.csv", index=False, float_format="%.2f")
+        frechet_df.to_csv(save_name, index=False, float_format="%.2f")
         return frechet_df
 
     def plot_map(self, trajectory_tuple=None, save_only=False):
@@ -182,9 +187,11 @@ class WayFindingAnalyzer:
         plt.gcf().set_size_inches(10, 10)
 
         # load a background image called map.png
-        img = plt.imread('map3.png')
-        plt.imshow(img, extent=[-3.7, 3.05, -3.7, 3.7])
-
+        try:
+            img = plt.imread('configuration_files/map.png')
+            plt.imshow(img, extent=[-3.7, 3.05, -3.7, 3.7])
+        except Exception as e:
+            print("background image is not plotted. Please make sure the map.png file is in configuration_files folder")
         # for i in range(len(x_points) - 1):
         #     for j in range(len(y_points) - 1):
         #         rect = patches.Rectangle((x_points[i], y_points[j]), x_points[i + 1] - x_points[i],

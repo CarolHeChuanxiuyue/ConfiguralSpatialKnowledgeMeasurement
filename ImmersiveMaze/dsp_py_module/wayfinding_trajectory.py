@@ -1,7 +1,5 @@
 # Carol He: carol.hcxy@gmail.com
 import pathlib
-
-import pandas
 from matplotlib import patches
 from matplotlib.ticker import FormatStrFormatter
 
@@ -44,7 +42,7 @@ class WayFindingTrajectory:
         self._output_array = np.empty(0, dtype=self.output_data_type)
         self._processed_array = np.empty(0, dtype=self.processed_output_type)
         # self._trial_info = np.loadtxt(trial_info, delimiter=",", skiprows=1)
-        self._trial_info = pandas.read_csv(trial_info, delimiter=",")
+        self._trial_info = pd.read_csv(trial_info, delimiter=",")
         self._xgrid = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
         self._ygrid = [-3.7, -2.49, -1.49, -0.49, 0.49, 1.35, 2.10, 3.7]
         self._xctr = [round((self._xgrid[i + 1] + self._xgrid[i]) / 2, 1) for i in range(len(self._xgrid) - 1)]
@@ -55,6 +53,7 @@ class WayFindingTrajectory:
 
     def clean_data_w_reboot(self):
         for file in self._files_paths:
+            print('clean: '+file.stem + "...")
             tmp = pd.read_csv(file)
             clean = 0
             # find where the data got duplicated due to reboot the testing program
@@ -110,6 +109,7 @@ class WayFindingTrajectory:
 
     def processTrajectory(self):
         for file in self._files_paths:
+            print('process: '+file.stem + "...")
             array = DataStorage.get_array(file)
 
             for level_id in np.unique(array[:, 1]):
@@ -314,13 +314,15 @@ class WayFindingTrajectory:
         subject_nums = raw_df['SubjectNum'].unique()
         final_trajectory = pd.DataFrame(columns=['SubjectNum', 'TrialNum', 'Time', 'dX', 'dZ', 'pos'])
         for subject_num in subject_nums:
-            print("Processing subject number: " + str(subject_num) + "...")
+            print("Save discrete trajectory for the participant: " + str(subject_num) + "...")
             # get the unique trial numbers
             trial_nums = raw_df['TrialNum'].unique()
             for trial_num in trial_nums:
                 raw_trajectory = self.get_raw_trajectory(subject_num, trial_num)
                 # run lambda function on each row of the dataframe by calling get_closest_tile for X and Z columns
-                discrete_trajectory = self.convert_to_discrete(raw_trajectory)
+                try:
+                    discrete_trajectory = self.convert_to_discrete(raw_trajectory)
+                except Exception as e: print("Warning!! The participant : " + str(subject_num) + " did not complete trial " + str(trial_num) + ". Please remove it")
                 # save the discrete trajectory to csv
                 final_trajectory = pd.concat([final_trajectory, discrete_trajectory], ignore_index=True)
 

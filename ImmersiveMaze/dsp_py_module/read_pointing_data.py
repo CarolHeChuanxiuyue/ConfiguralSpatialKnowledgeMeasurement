@@ -11,6 +11,11 @@ class Pointing:
         pointData = pd.DataFrame()
         for file in self._files_paths:
             tmp = pd.read_csv(file)
+            if tmp.loc[2]['TrialNumber'] == 1:
+                tmp = tmp.iloc[2:,:]
+            tmp.columns = ['TrialNumber', 'TrialID', 'RealAngle', 
+                            'TrueAngle', 'AngleError', 'StartingObject', 
+                            'EndObject', 'TimeTaken']
             tmp['ID'] = int(file.stem)
             pointData = pd.concat([pointData,tmp])
             
