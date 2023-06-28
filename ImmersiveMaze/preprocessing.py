@@ -25,7 +25,7 @@ def main():
     # strategy.plot_path("Mailbox", "Trashcan")
     # path = strategy.get_path("Piano", "Stove")
 
-    strategy.get_all_topological_plots("topo_plot", save_only=True)
+    # strategy.get_all_topological_plots("topo_plot", save_only=True)
 
     learning_map = ShortcutMap("learning_walls.csv", "objects.csv", "ProcessedData/learning_shortcuts.csv" , learning=True)
     #
@@ -48,7 +48,8 @@ def main():
 
     # analyzer.plot_topo(401,1)
     # analyzer.calculate_frechet()
-    # analyzer.plot_all_discrete_trajectories_on_map(save_only=True)
+    analyzer.plot_all_discrete_trajectories_on_map(save_only=True)
+    # analyzer.plot_trajectory_for_one_subject(401, 1, save_only=True)
 
 if __name__ == '__main__':
     main()

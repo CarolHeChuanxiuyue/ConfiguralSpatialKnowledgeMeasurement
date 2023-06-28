@@ -2,6 +2,7 @@ from __future__ import annotations
 import csv
 import heapq
 import numpy as np
+from matplotlib import pyplot as plt, patches
 
 learning_order = ["Chair",
                   "Mailbox",
@@ -97,6 +98,7 @@ class ShortcutMap:
         self.grid_x = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
         self.grid_y = [-3.7, -2.49, -1.49, -0.49, 0.49, 1.35, 2.10, 3.7]
         self.tile_map = get_tile_map(self.grid_x, self.grid_y)
+        self.walls = []
         self.connectivity_matrix = generate_connectivity_matrix(self.grid_x, self.grid_y, self.tile_map)
         self.load_walls(wall_file)
         self.objects = load_objects(object_file)
@@ -182,7 +184,7 @@ class ShortcutMap:
             for row in reader:
                 x, y = int(row[0]), int(row[1])
                 current_index = self.coord_to_index((x, y))
-                t = self.index_to_coord(current_index)
+                self.walls.append((x, y))
                 # print("X: {}, Y: {}, Index: {}, t: {}".format(x, y, current_index, t))
                 # set current block and neighboring blocks to 0
                 self.connectivity_matrix[current_index][current_index] = 0
@@ -365,6 +367,88 @@ class ShortcutMap:
         # plt.matshow(resized_map, cmap='gray')
         # plt.show()
 
+    def plot_grid_map(self, path):
+        x_points = self.grid_x
+        y_points = self.grid_y
+        # Create a new figure and axis
+        fig, ax = plt.subplots()
+
+        # Plot vertical lines
+        for x in x_points:
+            ax.axvline(x, color='gray', linestyle='-', linewidth=0.5)
+
+        # Plot horizontal lines
+        for y in y_points:
+            ax.axhline(y, color='gray', linestyle='-', linewidth=0.5)
+
+        for x in range(len(x_points) - 1):
+            for y in range(len(y_points) - 1):
+                if self.check_coord_is_wall((x, y)):
+                    ax.add_patch(
+                        patches.Rectangle(
+                            (x_points[x], y_points[y]),  # (x,y)
+                            abs(x_points[x] - x_points[x + 1]),  # width
+                            abs(y_points[y] - y_points[y + 1]),  # height
+                            facecolor="black"
+                        )
+                    )
+
+        # for obj in self.objects:
+        #     pos = self.tile_map[self.objects[obj][1]][self.objects[obj][0]]
+        #     print(pos)
+        #     # plot a small rectangle
+        #     ax.add_patch(
+        #         patches.Rectangle(
+        #             (pos[0], pos[1]),  # (x,y)
+        #             0.05,  # width
+        #             0.05,  # height
+        #             facecolor="gray"))
+
+        # find duplicate pos in path and delete the duplicate
+        def remove_duplicate_tuples(lst):
+            seen = set()
+            result = []
+            for item in lst:
+                if item not in seen:
+                    result.append(item)
+                    seen.add(item)
+            return result
+
+        path = remove_duplicate_tuples(path)
+        print(path)
+
+        # remove (1,6) from path
+        path.remove((1,6))
+
+        path.append((5,0))
+
+        path = self.convert_to_tile_path(path)
+
+        for i in range(len(path) - 1):
+            # plot line
+            ax.plot([path[i][0], path[i + 1][0]], [path[i][1], path[i + 1][1]], color="lightgray", linewidth=0.75, linestyle="--")
+
+            # Set plot limits
+        ax.set_xlim(min(x_points), max(x_points))
+        ax.set_ylim(min(y_points), max(y_points))
+
+        # Set grid properties
+        # ax.set_xticks(x_points)
+        # ax.set_yticks(y_points)
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.set_aspect('equal')
+
+        plt.gca().set_axis_off()
+        plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
+
+        # Save the plot without white borders
+        plt.savefig('grid_map.png', dpi=300, bbox_inches='tight', pad_inches=0, transparent=False)
+        # ax.grid(True, linestyle='--', linewidth=0.5, color='black', alpha=0.7)
+
+        # Display the plot
+        plt.show()
+
 
 def print_matrix(matrix):
     for row in matrix:
@@ -374,3 +458,8 @@ def print_matrix(matrix):
 if __name__ == "__main__":
     xgrid = [-3.7, -2.35, -1.25, -0.49, 0.4, 1.2, 2.0, 3.05]
     ygrid = [-3.7, -2.49, -1.49, -0.49, 0.49, 1.35, 2.10, 3.7]
+    shortcut_map = ShortcutMap("walls.csv", "objects.csv", "ProcessedData/shortcuts.csv")
+    learning_map = ShortcutMap("learning_walls.csv", "objects.csv", "ProcessedData/learning_shortcuts.csv",
+                               learning=True)
+    _, path = learning_map.get_learning_path("Chair", "Well")
+    shortcut_map.plot_grid_map(path)

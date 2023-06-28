@@ -188,7 +188,7 @@ class WayFindingAnalyzer:
 
         # load a background image called map.png
         try:
-            img = plt.imread('configuration_files/map.png')
+            img = plt.imread('grid_map.png')
             plt.imshow(img, extent=[-3.7, 3.05, -3.7, 3.7])
         except Exception as e:
             print("background image is not plotted. Please make sure the map.png file is in configuration_files folder")
@@ -198,8 +198,8 @@ class WayFindingAnalyzer:
         #                                  y_points[j + 1] - y_points[j], linewidth=0.5, edgecolor='gray',
         #                                  facecolor='none')
         #         plt.add_patch(rect)
-        plt.vlines(x_points, min(y_points), max(y_points), colors='gray', linewidth=0.5)
-        plt.hlines(y_points, min(x_points), max(x_points), colors='gray', linewidth=0.5)
+        # plt.vlines(x_points, min(y_points), max(y_points), colors='gray', linewidth=0.5)
+        # plt.hlines(y_points, min(x_points), max(x_points), colors='gray', linewidth=0.5)
 
         # check trajectory data is a tuple and not none
         if trajectory_tuple is not None and isinstance(trajectory_tuple, tuple):
